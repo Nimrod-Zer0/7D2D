@@ -1,0 +1,11 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\item_modifiers.xml']" />
+
+    <!-- 
+        Seems light values of any flashlights cant be modified.
+        =======================================================
+        <set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0.05</set> 
+    -->
+
+</config>

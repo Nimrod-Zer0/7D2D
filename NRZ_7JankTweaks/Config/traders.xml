@@ -1,0 +1,12 @@
+<config>
+	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+	<remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\traders.xml']" />
+    
+  <!-- Alter trader open/close times -->
+  <set xpath="/traders/trader_info[@id='1']/@open_time">4:05</set>      <!-- Default open_time="6:05" -->
+  <set xpath="/traders/trader_info[@id='1']/@close_time">21:00</set>    <!-- Default close_time="21:50" -->
+  
+  <!-- Alter trader min/max inventory -->
+  <set xpath="/traders/trader_info[@id='1']/@min_inventory">25</set>    <!-- Default min_inventory="40" -->
+  <set xpath="/traders/trader_info[@id='1']/@max_inventory">120</set>   <!-- Default  max_inventory="80" -->
+</config>

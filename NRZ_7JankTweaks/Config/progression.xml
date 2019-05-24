@@ -1,0 +1,55 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\progression.xml']" />
+
+    <!-- 
+    5/10/19
+        most of this isnt needed anymore as dumb pimps finally added xp multiplier into base game.
+
+    =====================    
+        Xp multiplier 
+    =====================
+        Vanilla = 1.0149    
+    
+    <set xpath="/progression/level/@experience_multiplier">1.25</set>
+    -->
+    <!-- 
+        Cost multiplier for next skill point per level 
+    ======================================================
+        Vanilla = 1.18    
+    
+    <set xpath="/progression/attributes/@cost_multiplier_per_level">1.1</set>
+    -->
+
+    <!-- 
+        Change Intellect stat so flawless weapons can NOT be crafted 
+    ====================================================================    
+        rather then trying to change all the stats that would be affected i simply made weapons (guns) not craftable in workbench.
+        so this means flawless weapons (guns) cant be crafted :)
+    -->
+
+    <!-- Remove automatic weapons perk: increse rate of fire for automatic weapons -->
+    <remove xpath="/progression/perks/perk[@name='perkAutomaticWeapons']"/>
+    
+    <!-- Remove headshot perk: incresed ranged weapon headshot damage -->
+    <remove xpath="/progression/perks/perk[@name='perkHeadshot']"/>
+    
+    <!-- Remove salvage ops perk: wrench harvests faster and gives more resources 
+    <remove xpath="/progression/perks/perk[@name='perkSalvageOperations']"/>
+    -->
+    <!-- Remove stay down perk: power attacks do more damage to stunned enemies 
+    <remove xpath="/progression/perks/perk[@name='perkStayDown']"/>
+    -->
+    <!-- Remove heavy metal perl: sledge hammers do more damage to stunned enemies 
+    <remove xpath="/progression/perks/perk[@name='perkHeavyMetal']"/>
+    -->
+    <!-- Remove skull crusher perk: all melee weapons do additional headshot damage -->
+    <remove xpath="/progression/perks/perk[@name='perkSkullCrusher']"/>
+    
+    <!-- Remove healing factor perk: health regen -->
+    <remove xpath="/progression/perks/perk[@name='perkHealingFactor']"/>
+    
+    <!-- Remove hidden strike perk: sneak attacks do even more additional damage -->
+    <remove xpath="/progression/perks/perk[@name='perkHiddenStrike']"/>
+    
+</config>

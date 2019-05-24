@@ -1,0 +1,39 @@
+<config>
+	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+	<remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\quests.xml']" />
+
+	<!-- Removed all basic tasks 
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival2']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival3']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival4']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival5']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival6']" />
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival7']" />
+	-->
+
+	<!-- 
+		Campfire task only 	
+		==================
+		example that gives 6 skill points and 1000 experiance when completed.
+
+		This should be enough to give player a few starting skills as a base to grow from.
+	-->
+	
+	<!-- 
+		change the quest 8 (campfire) task to quest id 1 so its called 1st 
+		==================================================================
+		this is confusing and stupid, we changed the id (so it will be called as 1st task) but the other commands below 
+		referance quest 1 so it would appear we are changeing that (quest 1) node and NOT (quest 8).
+	
+	<set xpath="/quests/quest[@id='quest_BasicSurvival8']/@id">quest_BasicSurvival1</set>
+	-->
+	<!-- Adjust existing skillpoint value of quest 8 to 6
+	<set xpath="/quests/quest[@id='quest_BasicSurvival1']/reward[@type='SkillPoints']/@value">6</set>
+	-->
+	<!-- Add a NON existing Exp reward to quest 8
+	<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
+		<reward type="Exp" value="1000" />
+	</append>
+	-->
+</config>

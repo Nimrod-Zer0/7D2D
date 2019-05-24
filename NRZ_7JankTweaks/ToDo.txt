@@ -1,0 +1,38 @@
+This is a list of future changes to game i would like to eventually do.
+-----------------------------------------------------------------------
+
+Adjust Perks.
+    Some are just stupid and dont make ANY sence.  lol
+    like the faster fire rate for automatic weapons. HOW? by some how pulling the trigger differently?  --  WTF :)
+    
+    Note:
+        unfortunatly due to the limitations of the way xpath is implemented, text files are locally stored and do NOT propogate from dedicated server.
+        so while adjustments can be made and even completely new perks added, it would require anyone who plays on the server to all have the same mod files intalled locally on there pc.
+        until the devs install the propper hooks for this functionality its not worth making any adjustments at this time.
+
+More diversity for coats. 
+    The duster seems to be the go to coat for all weather and it shouldnt be.
+
+Remove Irradiated Zombies.
+    Glowing freaks with massive hp that are like a square peg in round hole in a zombie apocalypse.
+    Why not flying ghost aligators if we're gonna have this stupid shit ?   lol
+
+Game stages are stupid. 
+    players level should NOT dictate what type of zed spawns and number of them. especially in Multiplayer where it defaults to highest player near you.
+    The zombie group should be a list of all zombie types that has a random number of them spawn. 
+    You should be able to get a wandering horde anywhere from 3 to 150 zombies at anytime when a wandering horde is due for example.
+
+Bloodmoon 7 day hordes are stupid. 
+    --bloodmoon can now be adjusted some with a17.2--
+    
+    If you build a base (large or small) you should not reliable know when a horde is coming for you. wandering hordes are the only horde type that should be in the game. 
+    As stated above, wondering hordes should be completely random in quantity of zombies. you could see small group or OMFG horde numbers. lol
+    You should NOT only feel unsafe on a blood moon. you should always be paraniod about what may be out there. 
+
+
+Notes: 
+    Not really sure if its worth the effort to change the way hordes work. the devs just copied and pasted thousands of lines in config up to a set number of blood moons in a number of config files.
+    this approach is beyond amature !!!  why would you not simply append or get prev number and increase it by 1 with a simple function ?
+
+    For the reasons above along with whatever horrid code that may be hard coded and/or not visable code, it may simply not be worth it to even attempt a change. we'll see.
+

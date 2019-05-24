@@ -1,0 +1,9 @@
+<configs>
+	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\XUi\xui.xml']" />
+
+	<!-- Add entry for new window == Displays the Addl food/Water Hud bars -->
+	<insertBefore xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']//window[@name='windowToolbelt']" >
+		<window name="window_7JankMod_menuStatsHUD" />	
+    </insertBefore>
+</configs>

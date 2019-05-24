@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="NRZ_7JankTweaks" />
+		<Description value="Some tweaks to 7 jank" />
+		<Author value="Nimrod_Zero" />
+		<Version value="0.1.1" />
+		<!--
+			command: exportcurrentconfigs
+			will show config with currently altered changes. (to verify that changes actually worked).
+			(appdata/7DaystoDie/Saves/<worldname>/<savegamename>/Configs is where they export to)
+
+			(12-18-2018) v0.1.0:
+				Reduced intro basic survival tasks to just build campfire.
+				Adjusted total skill points for completing task to 6 and 1000 xp for completing basic survival task.
+				Zombie dog, wolf, direwolf and both vulture types have less hp.
+				Yucca fruit has smaller chance of food poisoning.
+				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
+				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
+				Increased zombie loot drop chance to 10% from 2%.
+		
+			(1-11-2019) 	
+				Added Food and Water Bars to main hud.
+				All weapons now have weapon damage modifier based on quality (higher quality weapons do more damage). 
+
+			(1-31-2019)	
+				Removed seveal perks that didnt make any sence or made player way to over powered.
+
+			(5/20/2019)
+				removed mod xp multiplier as it was added to base game finally.
+				temp removed some mod perk changes as all new dumb ass perks were added by joel for a17.3
+				temp removed cut down initial beginner quest tasks.
+				adjusted weapon damage for guns.
+				adjusted light brightness, speed and handling on bike, minibike, motorcycle and 4x4. 
+				guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
+				plants/crops can be picked up by pressing E again. 
+				adjusted food/water hud to look more like the health/stam stats. (water progress bar no longer working with a17.3 - text is fine)
+				removed massive dark smoke from burnt forest biome.
+
+
+			Features:
+				Zombie dog, wolf, direwolf and both vulture types have less hp.
+				Yucca fruit has smaller chance of food poisoning.
+				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
+				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
+				Increased zombie loot drop chance to 10% from 2%.
+				Added Food and Water Bars to main hud.
+				Crouching no longer gives massive damage increase. (why would crouching make any projectile do more damage..lol)
+				All weapons now have weapon damage modifier based on quality (higher quality weapons do more damage).
+				Removed seveal perks that didnt make any sence or made player way to over powered.
+				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4. 
+				Guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
+				Plants/crops can be picked up by pressing E again.
+				Traders have more item count variance (min/max items they may have).
+				Removed burnt forest dark smoke (haze and light smoke still there)
+
+		-->
+		<Website value="" />
+	</ModInfo>
+</xml>

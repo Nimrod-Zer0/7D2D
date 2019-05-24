@@ -1,0 +1,20 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\recipes.xml']" />
+
+    <!-- Remove guns from workbench so perfect qualiy weapons cant be crafted (or any quality for that mater)-->
+    <remove xpath="/recipes/recipe[@name='gun44Magnum']" />
+    <remove xpath="/recipes/recipe[@name='gunAK47']" />
+    <remove xpath="/recipes/recipe[@name='gunBlunderbuss']" />
+    <remove xpath="/recipes/recipe[@name='gunCompoundBow']" />
+    <remove xpath="/recipes/recipe[@name='gunHuntingRifle']" />
+    <remove xpath="/recipes/recipe[@name='gunMR10']" />
+    <remove xpath="/recipes/recipe[@name='gunPistol']" />
+    <remove xpath="/recipes/recipe[@name='gunPumpShotgun']" />
+    <remove xpath="/recipes/recipe[@name='gunRocketLauncher']" />
+    <remove xpath="/recipes/recipe[@name='gunSMG5']" />
+    <remove xpath="/recipes/recipe[@name='gunToolNailgun']" />
+
+    <!-- <remove xpath="/recipes/recipe[@name='gunCrossbow']" /> -->
+
+</config>

@@ -1,0 +1,27 @@
+<configs>
+	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\biomes.xml']" />
+
+	<!-- 
+	=============================
+	Remove smoke from burnt biome
+	=============================
+	spectrums can be:
+
+		pine_forest
+		city
+		wasteland
+		desert
+		snow
+	-->
+	<append xpath="/worldgeneration/biomes/biome[@name='burnt_forest']">
+		<spectrum name="wasteland"/>
+	</append>
+
+	<!--	
+	remove saturation of snow biome   (both work - just need to decide if i should use it or not)
+	===============================
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum/@name">pine_forest</set>	
+	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum" />	
+	-->
+</configs>

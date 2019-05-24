@@ -1,0 +1,13 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\gamestages.xml']" />
+
+  	<!-- Remove 7 day horde -->  
+    <!-- <set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage/spawn/@maxAlive">0</set> -->
+
+    <!-- Increase max alive for wandering horde to make them more dangerous -->
+    <!-- <set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage/spawn/@maxAlive">90</set>  Default: 30 -->
+
+    <!-- Increase spawn number for wandering horde to make them more dangerous -->
+    <!-- <set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage/spawn/@num">30</set>   Default: varies from 2 - 9 -->
+</config>

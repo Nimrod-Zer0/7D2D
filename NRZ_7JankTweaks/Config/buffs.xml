@@ -1,0 +1,7 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\buffs.xml']" />
+
+    <!-- Remove the weather survival buff for newbies (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)-->
+    <remove xpath="/buffs/buff[@name='buffStatusCheck']/effect_group/triggered_effect[@buff='buffNewbieCoat']" />
+</config>
