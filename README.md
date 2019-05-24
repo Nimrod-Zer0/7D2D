@@ -53,7 +53,7 @@ if you want to remove any mods simply remove them from the 'Mods' folder.
 </br></br>
 This mod is safe to use/remove at any time. there have been many times where i used and then removed mod during same singleplayer session with NO issues.</br>Dedicated server owners only need to have this mod running on server and all changes will propagate to clients when they join.
 
-</br></br>
+</br>
 
 Note:
 </br>
