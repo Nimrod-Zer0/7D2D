@@ -3,7 +3,7 @@
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\XUi\xui.xml']" />
 
 	<!-- Add entry for new window == Displays the Addl food/Water Hud bars -->
-	<insertBefore xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']//window[@name='windowToolbelt']" >
+	<insertBefore xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='windowToolbelt']" >
 		<window name="window_7JankMod_menuStatsHUD" />	
     </insertBefore>
 </configs>

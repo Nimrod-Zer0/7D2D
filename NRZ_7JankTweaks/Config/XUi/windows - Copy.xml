@@ -23,25 +23,36 @@
 		<window name="window_7JankMod_menuStatsHUD" width="400" height="200" pos="178,92" controller="HUDStatBar" visible="{statvisible}" anchor="LeftBottom">
 			<rect name="rect_playerStats" controller="PlayerStatsWindow">
 				<rect name="rect_PlayerStats_Hunger" >
+					<!--
+					<sprite name="sprite_playerStatsHungerBorder" depth="1" pos="3, -5" width="126" height="32" type="sliced" color="0,0,0,225" />
+					<sprite name="sprite_playerStatsHungerBackground" depth="1" pos="4, -4" width="125" height="30" type="sliced" color="0,0,0,128" />
+					<sprite name="sprite_playerStatsHungerFill" depth="1" pos="4, -4" width="125" height="30" type="filled" color="52,174,86,192" fill="{playerfoodfill}" />	
+					 -->
 					<sprite name="sprite_playerStatsHungerBackground" depth="1" pos="4, -4" width="127" height="34" type="sliced" color="0,0,0,250" />
 					<sprite name="sprite_playerStatsHungerBorder" depth="1" pos="3, -5" width="126" height="32" type="sliced" color="52,174,86,225" />
 					<sprite name="sprite_playerStatsHunger" depth="2" pos="8,-8" style="icon22px" sprite="ui_game_symbol_hunger"/>
-					<!--	
-						<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text="[DECEA3]{playerfood}[-]/100" />
-						{playermodifiedcurrentfood}/{playerfoodmax}
+					<!--	<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text=" [DECEA3]{playerfood}%[-]" />	
+							<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text=" [DECEA3]{playerfood}[-]/100" />
 					-->
-					<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text="[DECEA3]{playerfood}" />
+					<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text=" [DECEA3]{playerfood}[-]/100" />
 				</rect>
 				
 				<rect name="rect_PlayerStats_Thirst" >
+					<!--
+						============================================================================================
+						since a17.3 the water progress/fill bar no longer works because they changed water hud a bit
+						============================================================================================
+					<sprite name="sprite_playerStatsThirstBorder" depth="1" pos="3, -42" width="126" height="32" type="sliced" color="0,0,0,192" />	
+					<sprite name="sprite_playerStatsThirstBackground" depth="1" pos="4, -41" width="125" height="30" type="sliced" color="0,0,0,128" />	
+					<sprite name="sprite_playerStatsThirstFill" depth="1" pos="4, -41" width="125" height="30" type="filled" color="52,137,167,192" fill="{playerwaterfill}" />	
+					-->
 					<sprite name="sprite_playerStatsThirstBackground" depth="1" pos="4, -41" width="127" height="34" type="sliced" color="0,0,0,250" />
 					<sprite name="sprite_playerStatsThirstBorder" depth="1" pos="3, -42" width="126" height="32" type="sliced" color="52,137,167,225" />	-->
 					<sprite name="sprite_playerStatsThirst" depth="2" pos="8,-45" style="icon22px" sprite="ui_game_symbol_thirst"/>
-					<!--		
-						<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text="[DECEA3]{playerwater}[-]/100" />
-						{playermodifiedcurrentwater}/{playerwatermax}
+					<!--	<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text=" [DECEA3]{playerwater}%[-]" />	
+					text="{playermodifiedcurrentwater}/{playerwatermax}"
 					-->
-					<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text="[DECEA3]{playerwater}" />
+					<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text=" [DECEA3]{playerwater}[-]/100" />
 				</rect>
 			</rect>
 		</window>

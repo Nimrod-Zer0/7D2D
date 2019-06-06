@@ -30,11 +30,42 @@
     <set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">0.045,0.5</set>   <!-- Default: 0.045,0.045 -->
     <set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">0.5,3.0</set>     <!-- Default: 0.5,1.8 -->
 
+    <!-- Make corpse stick around a bit longer -->
+    <!--    <set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath']/@value">60</set>  -->  <!-- Default: 30 -->
+        
     <!-- 
     Increase Head Dismemberment chance
     ==================================
     seems to have no effect reguardless of value/this value is also modified in shotgun ammo but not regular ammo
-    zombieTemplateMale
-    <set xpath="/entity_classes/entity_class/property[@name='DismemberMultiplierHead']/@value">5</set>
+            <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DismemberMultiplierHead']/@value">5</set>
     -->
 </config>
+
+<!--
+    Radiated zombies
+<entity_class name="zombieWightRadiated" extends="zombieWightFeral">
+<entity_class name="zombieBoeRadiated" extends="zombieBoeFeral">
+<entity_class name="zombieFemaleFatRadiated" extends="zombieFemaleFatFeral">
+<entity_class name="zombieJoeRadiated" extends="zombieJoeFeral">
+<entity_class name="zombieMoeRadiated" extends="zombieMoeFeral">
+<entity_class name="zombieArleneRadiated" extends="zombieArleneFeral">
+<entity_class name="zombieLabRadiated" extends="zombieLab">
+<entity_class name="zombieScreamerRadiated" extends="zombieScreamerFeral">
+<entity_class name="zombieDarleneRadiated" extends="zombieDarleneFeral">
+<entity_class name="zombieMarleneRadiated" extends="zombieMarlene">
+<entity_class name="zombieYoRadiated" extends="zombieYoFeral">
+<entity_class name="zombieSteveRadiated" extends="zombieSteveFeral">
+<entity_class name="zombieSpiderRadiated" extends="zombieSpiderFeral">
+<entity_class name="zombieFatCopRadiated" extends="zombieFatCopFeral">
+<entity_class name="zombieSoldierRadiated" extends="zombieSoldierFeral">
+<entity_class name="zombieSkateboarderRadiated" extends="zombieSkateboarderFeral">
+<entity_class name="zombieCheerleaderRadiated" extends="zombieCheerleaderFeral">
+<entity_class name="zombieOldTimerRadiated" extends="zombieOldTimerFeral">
+<entity_class name="zombieBikerRadiated" extends="zombieBikerFeral">
+-->
+
+
+
+
+
+
