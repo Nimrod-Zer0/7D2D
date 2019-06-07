@@ -10,6 +10,11 @@ Adjust Perks.
         so while adjustments can be made and even completely new perks added, it would require anyone who plays on the server to all have the same mod files intalled locally on there pc.
         until the devs install the propper hooks for this functionality its not worth making any adjustments at this time.
 
+Possibly adjust Temps (may not be worth it to fix)
+    they are severly broken and always have been. you so often you have to put more clothes on to cool down. 
+    maybe the player core temp vs outside temp is not working propperly?
+    or more likely the devs just threw some random numbers on items/clothes that effect player temps.
+
 More diversity for coats. 
     The duster seems to be the go to coat for all weather and it shouldnt be.
 
