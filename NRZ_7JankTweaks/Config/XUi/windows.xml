@@ -3,13 +3,6 @@
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\XUi\windows.xml']" />
 
 	<!-- 
-		To Do: 
-
-		Possibly condense health, stam, food, water all into 1 small hud element	
-	===================================================================================
-
-		this is just here as referance for removeing ui elements in future
-
 	Remove numbers from Stamina and Health Bars.	
 	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='hud']/rect[@stat_type='Stamina']/label[@name='TextContent']" />
 	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='hud']/rect[@stat_type='Health']/label[@name='TextContent']" />
@@ -18,30 +11,33 @@
 	<!-- Remove number from Stealth bar -->	
 	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='hud']/rect[@stat_type='Stealth']/label[@name='TextContent']" />
 
-	<!-- Addl Stats Ui (Food/Water)-->
 	<insertBefore xpath="/windows/window[@name='HUDLeftStatBars']" >
-		<window name="window_7JankMod_menuStatsHUD" width="400" height="200" pos="178,92" controller="HUDStatBar" visible="{statvisible}" anchor="LeftBottom">
+		<window name="window_7JankMod_menuStatsHUD" width="400" height="200" pos="178,92" visible="{statvisible}" anchor="LeftBottom">
 			<rect name="rect_playerStats" controller="PlayerStatsWindow">
-				<rect name="rect_PlayerStats_Hunger" >
-					<sprite name="sprite_playerStatsHungerBackground" depth="1" pos="4, -4" width="127" height="34" type="sliced" color="0,0,0,250" />
-					<sprite name="sprite_playerStatsHungerBorder" depth="1" pos="3, -5" width="126" height="32" type="sliced" color="52,174,86,225" />
-					<sprite name="sprite_playerStatsHunger" depth="2" pos="8,-8" style="icon22px" sprite="ui_game_symbol_hunger"/>
-					<!--	
-						<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text="[DECEA3]{playerfood}[-]/100" />
-						{playermodifiedcurrentfood}/{playerfoodmax}
-					-->
-					<label name="label_playerStatsHunger" depth="2" pos="48,-8" width="200" font_size="24" text="[DECEA3]{playerfood}" />
+				<rect name="rect_playerStatsTemp" >
+					<sprite name="sprite_playerStatsTempBorder" depth="1" pos="3, 0" width="102" height="24" type="sliced" color="0,0,0,192" />
+					<sprite name="sprite_playerStatsTempBackground" depth="1" pos="4, -1" width="100" height="22" type="sliced" color="64,64,64,192" />
+					<sprite name="sprite_playerStatsCold" depth="2" pos="4,-1" style="icon22px" sprite="ui_game_symbol_temperature"/>
+					<label name="label_playerStatsTemp" depth="2" pos="27, -3" width="105" font_size="17" text="Core [DECEA3]{playercoretemp}[-]" />
 				</rect>
 				
-				<rect name="rect_PlayerStats_Thirst" >
-					<sprite name="sprite_playerStatsThirstBackground" depth="1" pos="4, -41" width="127" height="34" type="sliced" color="0,0,0,250" />
-					<sprite name="sprite_playerStatsThirstBorder" depth="1" pos="3, -42" width="126" height="32" type="sliced" color="52,137,167,225" />	-->
-					<sprite name="sprite_playerStatsThirst" depth="2" pos="8,-45" style="icon22px" sprite="ui_game_symbol_thirst"/>
-					<!--		
-						<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text="[DECEA3]{playerwater}[-]/100" />
-						{playermodifiedcurrentwater}/{playerwatermax}
-					-->
-					<label name="label_playerStatsThirst" depth="2" pos="48,-45" width="200" font_size="24" text="[DECEA3]{playerwater}" />
+				<rect name="rect_playerStatsHunger" >
+					<sprite name="sprite_playerStatsHungerBorder" depth="1" pos="3, -27" width="102" height="24" type="sliced" color="0,0,0,192" />
+					<sprite name="sprite_playerStatsHungerBackground" depth="1" pos="4, -28" width="100" height="22" type="sliced" color="64,64,64,192" />
+					<sprite name="sprite_playerStatsHungerFill" depth="1" pos="4, -28" width="100" height="22" type="filled" color="52,174,86,192" fill="{playerfoodfill}" />
+					<sprite name="sprite_playerStatsHunger" depth="2" pos="4,-28" style="icon22px" sprite="ui_game_symbol_hunger"/>
+				</rect>
+				
+				<rect name="rect_playerStatsThirst" >
+					<sprite name="sprite_playerStatsThirstBorder" depth="1" pos="3, -54" width="102" height="24" type="sliced" color="0,0,0,192" />
+					<sprite name="sprite_playerStatsThirstBackground" depth="1" pos="4, -55" width="100" height="22" type="sliced" color="64,64,64,192" />
+					<sprite name="sprite_playerStatsThirst" depth="2" pos="4,-55" style="icon22px" sprite="ui_game_symbol_thirst"/>
+				</rect>
+
+				<rect name="rect_hudStatBarWater" >
+	  				<rect controller="HUDStatBar" stat_type="Water">
+	  					<filledsprite depth="1" name="BarContent" pos="4, -55" width="100" height="22" type="filled" color="52,137,167,192" fill="2" />
+	  				</rect>
 				</rect>
 			</rect>
 		</window>
