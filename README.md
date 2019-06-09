@@ -38,7 +38,9 @@ Features:
 	</br>
 	Traders have more item count variance (min/max items they may have).
 	</br>
-	Removed burnt forest dark smoke (haze and light smoke still there)
+	Removed burnt forest dark smoke (haze and light smoke still there).
+	</br>
+	adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it).
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>

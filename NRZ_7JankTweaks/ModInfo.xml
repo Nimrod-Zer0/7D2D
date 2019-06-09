@@ -40,7 +40,7 @@
 			(6/7/19)
 				decreased chance of mining helmet spawn in cars. (way to easy to find one)
 				Compound bow now shoots closer to the effective range of a crossbow like it should.
-
+				adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it)
 
 
 			Features:
@@ -57,7 +57,9 @@
 				Guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
 				Plants/crops can be picked up by pressing E again.
 				Traders have more item count variance (min/max items they may have).
-				Removed burnt forest dark smoke (haze and light smoke still there)
+				Removed burnt forest dark smoke (haze and light smoke still there).
+				adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it)
+
 
 		-->
 		<Website value="" />
