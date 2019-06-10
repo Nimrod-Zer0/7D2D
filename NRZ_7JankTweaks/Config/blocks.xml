@@ -2,12 +2,21 @@
 	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\blocks.xml']" />
 
+	<!-- Burning barrels should give off heat like campfires do	-->
+	<append xpath="/blocks/block[@name='burningBarrelPlayer']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='burningBarrel']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	</append>
+
 	<!--
+		(Add the E action back to wild plants)
+		
 		Credit to: KhaineGB
 		https://7daystodie.com/forums/showthread.php?95086-Press-lt-E-gt-To-Pick-up-Wild-Plants-modlet!&highlight=pick+plants
 	-->
-
-	<!-- Add the E action back to wild plants -->
 	<append xpath="/blocks/block[@name='plantedMushroom3Harvest']">
 		<property name="Class" value="CropsGrown"/>
 	</append>

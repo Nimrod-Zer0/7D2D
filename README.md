@@ -41,6 +41,10 @@ Features:
 	Removed burnt forest dark smoke (haze and light smoke still there).
 	</br>
 	Adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it).
+	</br>
+	Burning barrels now give off heat like lit campfire does.
+	</br>
+	Snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>

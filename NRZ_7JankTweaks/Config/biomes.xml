@@ -24,10 +24,16 @@
 		<Temperature min="20" max="40" prob="1"/>  <!-- Default min="20" max="50" -->
 	</append>
 
+	<!-- Adjust temp range in snow -->
+	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/weather/Temperature" />	
+	<append xpath="/worldgeneration/biomes/biome[@name='snow']/weather">
+		<Temperature min="-90" max="-50" prob="1"/> 	<!-- Default: min= (minus 60) max= (minus 30) -->
+	</append>
+
 	<!--	
 	remove saturation of snow biome   (both work - just need to decide if i should use it or not)
 	===============================
 	<set xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum/@name">pine_forest</set>	
 	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum" />	
-	-->
+	-->	
 </configs>
