@@ -3,7 +3,13 @@
 	<remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\items.xml']" />
 
 	<!-- Lower chance of food poisening for yucca fruit -->
-	<set xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/display_value[@name='FoodPoisoningRisk']/@value">0.03</set>
+	<set xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/display_value[@name='FoodPoisoningRisk']/@value">0.03</set>	<!-- Default: 0.1 -->
+
+	<!-- Lower chance of food poisening for potato -->
+	<set xpath="/items/item[@name='foodCropPotato']/effect_group/display_value[@name='FoodPoisoningRisk']/@value">0.05</set>	<!-- Default: 0.3 -->
+
+	<!-- Lower chance of food poisening for corn -->
+	<set xpath="/items/item[@name='foodCropCorn']/effect_group/display_value[@name='FoodPoisoningRisk']/@value">0.05</set>	<!-- Default: 0.1 -->
 
 	<!--	
 	 	Credit goes to: Elucidus for this damage mod concept
@@ -277,6 +283,20 @@
 
 		leather duster & jacket - should not be godlike insulator in any weather like they are.
 
+<item name="armorMilitaryBoots">
+
+<item name="gothBootsBlack">
+<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
+
+<item name="wornBoots">
+<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+
+<item name="dressShoes">
+<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
+
 <item name="armyPants">
 <passive_effect name="HypothermalResist" operation="base_add" value="8"/>
 <passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
@@ -284,6 +304,46 @@
 <item name="armyShirt">
 <passive_effect name="HypothermalResist" operation="base_add" value="8"/>
 <passive_effect name="HyperthermalResist" operation="base_add" value="8"/>		
+
+<item name="armorMilitaryBoots">   	//no insulation
+<item name="armorMilitaryGloves">	//no insulation
+
+<item name="hazmatGloves">
+<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+
+
+<item name="armorLeatherHood">		
+<item name="armorLeatherChest">
+<item name="armorLeatherGloves">
+<item name="armorLeatherPants">
+<item name="armorLeatherBoots">
+
+fiber hood 
+<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+
+<item name="plantFiberPants">
+<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+
+<item name="plantFiberShirt">
+<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+
+<item name="plantFiberShoes"> 
+<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+
+<item name="plantFiberGloves"> 
+<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+
+<item name="plantFiberHat">
+<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+<passive_effect name="HyperthermalResist" operation="base_add" value="7"/>
+
+
 -->
 
 </config>
