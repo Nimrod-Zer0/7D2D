@@ -191,6 +191,49 @@
 		</effect_group>
 	</append>
 
+	<!--	Leather Armor	 -->
+	<!--
+	<remove xpath="/items/item[@name='armorLeatherHood']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	<remove xpath="/items/item[@name='armorLeatherChest']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	<remove xpath="/items/item[@name='armorLeatherGloves']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	<remove xpath="/items/item[@name='armorLeatherPants']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	<remove xpath="/items/item[@name='armorLeatherBoots']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	-->
+	<append xpath="/items/item[@name='armorLeatherHood']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/items/item[@name='armorLeatherChest']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+			<passive_effect name="HyperthermalResist" operation="base_subtract" value="3"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/items/item[@name='armorLeatherGloves']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/items/item[@name='armorLeatherPants']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+			<passive_effect name="HyperthermalResist" operation="base_subtract" value="3"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/items/item[@name='armorLeatherBoots']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+		</effect_group>
+	</append>
+	
 	<!--	Leather Dusters	-->
 	<remove xpath="/items/item[@name='leatherDuster']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='leatherDuster']/effect_group/passive_effect[@name='HyperthermalResist']" />
@@ -268,8 +311,29 @@
 		</effect_group>
 	</append>
 	
+	<!--	Military Boots	  -->
+	<append xpath="/items/item[@name='armorMilitaryBoots']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="5"/>		<!--Default: 0-->
+			<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>			<!--Default: 0-->
+		</effect_group>
+	</append>
+
+	<!--	Military Gloves	   -->
+	<append xpath="/items/item[@name='armorMilitaryGloves']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="1"/>		<!--Default: 0-->
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>			<!--Default: 0-->
+		</effect_group>
+	</append>
+
+	<!--	Dress Shoes	   -->
+	<set xpath="/items/item[@name='dressShoes']/effect_group/passive_effect[@name='HypothermalResist']/@value">2</set>  	<!-- Default: add 4 -->
+	<set xpath="/items/item[@name='dressShoes']/effect_group/passive_effect[@name='HyperthermalResist']/@value">2</set>  	<!-- Default: add 4 -->
+
+
 <!-- Clothing changes 
-	
+
 		puffer coat - should be hotter in desert not cooler
 		sweatshirt - should be hotter in desert not cooler
 
@@ -282,8 +346,6 @@
 		leather armor - should be hot in desert
 
 		leather duster & jacket - should not be godlike insulator in any weather like they are.
-
-<item name="armorMilitaryBoots">
 
 <item name="gothBootsBlack">
 <passive_effect name="HypothermalResist" operation="base_add" value="4"/>
@@ -305,45 +367,9 @@
 <passive_effect name="HypothermalResist" operation="base_add" value="8"/>
 <passive_effect name="HyperthermalResist" operation="base_add" value="8"/>		
 
-<item name="armorMilitaryBoots">   	//no insulation
-<item name="armorMilitaryGloves">	//no insulation
-
 <item name="hazmatGloves">
 <passive_effect name="HypothermalResist" operation="base_add" value="4"/>
 <passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-
-
-<item name="armorLeatherHood">		
-<item name="armorLeatherChest">
-<item name="armorLeatherGloves">
-<item name="armorLeatherPants">
-<item name="armorLeatherBoots">
-
-fiber hood 
-<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
-
-<item name="plantFiberPants">
-<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
-
-<item name="plantFiberShirt">
-<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
-
-<item name="plantFiberShoes"> 
-<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-
-<item name="plantFiberGloves"> 
-<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-
-<item name="plantFiberHat">
-<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="7"/>
-
-
 -->
 
 </config>
