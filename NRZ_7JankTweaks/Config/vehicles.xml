@@ -108,6 +108,6 @@
     -->    
 
 	<!-- Bike -->
-	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">4.5,8</set>	<!-- Default: 5, 10-->
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">5.5,8</set>	<!-- 4.5 Default: 5, 10-->
 
 </config>
