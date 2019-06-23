@@ -11,6 +11,37 @@
 		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
 	</append>
 
+	<!--	Explosive Charge	-->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.RadiusEntities']/@value">7</set>	<!-- Default: 5 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.EntityDamage']/@value">1600</set>	<!-- Default: 800 -->
+
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.RadiusBlocks']/@value">5</set>		<!-- Default: 5 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.BlockDamage']/@value">3000</set>	<!-- Default: 3000 -->
+
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.cloth']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.earth']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.glass']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.metal']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.organic']/@value">130</set>	<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.stone']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.wood']/@value">130</set>		<!-- Default: 130 -->
+	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.water']/@value">130</set>		<!-- Default: 130 -->
+<!--
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.BlockDamage" value="3000"/>
+	<property name="Explosion.EntityDamage" value="800"/>
+
+	<property name="Explosion.DamageBonus.cloth" value="130"/>
+	<property name="Explosion.DamageBonus.earth" value="130"/>
+	<property name="Explosion.DamageBonus.glass" value="130"/>
+	<property name="Explosion.DamageBonus.metal" value="130"/>
+	<property name="Explosion.DamageBonus.organic" value="130"/>
+	<property name="Explosion.DamageBonus.stone" value="130"/>
+	<property name="Explosion.DamageBonus.wood" value="130"/>
+	<property name="Explosion.DamageBonus.water" value="0"/>
+-->
+
 	<!--
 		(Add the E action back to wild plants)
 		
