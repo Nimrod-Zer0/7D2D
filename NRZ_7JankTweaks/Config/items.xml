@@ -259,7 +259,7 @@
 	<append xpath="/items/item[@name='pufferCoat']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="35"/>			<!--Default: add 25-->
-			<passive_effect name="HyperthermalResist" operation="base_subtract" value="25"/>	<!--Default: add 2-->
+			<passive_effect name="HyperthermalResist" operation="base_subtract" value="30"/>	<!--Default: add 2-->
 		</effect_group>
 	</append>
 
