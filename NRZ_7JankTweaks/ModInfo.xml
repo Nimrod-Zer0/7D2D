@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="Some tweaks to 7 jank" />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.1.0" />
+		<Version value="1.2" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -37,12 +37,17 @@
 				adjusted food/water hud to look more like the health/stam stats. (water progress bar no longer working with a17.3 - text is fine)
 				removed massive dark smoke from burnt forest biome.
 
-			(v1.1.0)
+			(v1.1)
 				decreased chance of mining helmet spawn in cars. (way to easy to find one)
 				Compound bow now shoots closer to the effective range of a crossbow like it should.
 				adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it)
 				burning barrels now give off heat like lit campfire does.
 				snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
+
+			(v1.2)
+				adjust zombie dog and rad vulture health slightly.
+				adjusted thrown dynamite damage and explosion range. (1 stick)
+				adjusted explosive charge entity damage and explosion range. (3 sticks bundled)
 
 			
 			Features:
@@ -63,7 +68,7 @@
 				Adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it)
 				Burning barrels now give off heat like lit campfire does.
 				Snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
-
+				Thrown dynamite and explosive charge damages and explosive ranges adjusted to better relate to each other (Dynamite is 1 stick, Explosive Charge is 3 sticks bundled).
 		-->
 		<Website value="" />
 	</ModInfo>
