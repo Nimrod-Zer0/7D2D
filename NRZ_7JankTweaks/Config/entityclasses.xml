@@ -9,16 +9,16 @@
     <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@operation='base_set']/@value">55</set>    <!-- Default: 140 -->
 
     <!-- Reduce DireWolf health -->
-    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@operation='base_set']/@value">125</set>   <!-- Default: 250 -->
+    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@operation='base_set']/@value">150</set>   <!-- Default: 250 -->
     
     <!-- Reduce zombie twirly dog health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@operation='base_set']/@value">30</set>   <!-- Default: 100 -->
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@operation='base_set']/@value">45</set>   <!-- Default: 100 -->
     
     <!-- Reduce zombie vulture health health -->
     <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@operation='base_set']/@value">10</set>   <!-- Default: 30 -->
 
     <!-- Reduce zombie vulture (Rad) health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@operation='base_set']/@value">35</set>   <!-- Default: 120 -->
+    <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@operation='base_set']/@value">45</set>   <!-- Default: 120 -->
 
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Immunity']/@value">sickness;disease;wellness;bleeding</set>
