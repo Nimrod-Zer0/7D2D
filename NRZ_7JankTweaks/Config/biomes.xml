@@ -35,5 +35,18 @@
 	===============================
 	<set xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum/@name">pine_forest</set>	
 	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum" />	
+
+	<biomemap id="01" name="snow"/>
+	<biomemap id="03" name="pine_forest"/>
+	<biomemap id="05" name="desert"/>
+	<biomemap id="06" name="water"/>
+	<biomemap id="07" name="radiated"/>
+	<biomemap id="08" name="wasteland"/>
+
+	<remove xpath="/worldgeneration/biomes/biome[@name='desert']/spectrum" />
+
+	<remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/spectrum" />
+
+	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum" />
 	-->	
 </configs>
