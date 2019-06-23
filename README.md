@@ -45,6 +45,8 @@ Features:
 	Burning barrels now give off heat like lit campfire does.
 	</br>
 	Snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
+	</br>
+	Thrown dynamite and explosive charge damages and explosive ranges adjusted to better relate to each other (Dynamite is 1 stick, Explosive Charge is 3 sticks bundled).
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>
