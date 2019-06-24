@@ -343,6 +343,9 @@
 	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='EntityDamage']/@value">1000</set>	<!-- Default: 680 -->
 	<set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageEntity']/@value">1000</set>	<!-- Default: 680 -->
 
+	<!--	First Aid Kit	-->
+	<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>						<!-- Default: 5 -->
+	
 <!--
 	<append xpath="/items/item[@name='thrownDynamite']">
 		<property name="Explosion.DamageBonus.cloth" value="130"/>
