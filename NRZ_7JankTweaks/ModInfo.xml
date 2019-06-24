@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="Some tweaks to 7 jank" />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.2" />
+		<Version value="1.3" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -44,11 +44,14 @@
 				burning barrels now give off heat like lit campfire does.
 				snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
 
-			(v1.2)
+			(v1.2) june 21 2019
 				adjust zombie dog and rad vulture health slightly.
 				adjusted thrown dynamite damage and explosion range. (1 stick)
 				adjusted explosive charge entity damage and explosion range. (3 sticks bundled)
-
+							
+			(v1.3) june 24 2019
+				adjusted Zombie dog, wolf, direwolf and both vultures health a bit (slightly higher since weapon damage was adjusted).
+				first aid kit stack size increased to 10.
 			
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
