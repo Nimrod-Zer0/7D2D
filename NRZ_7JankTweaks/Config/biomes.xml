@@ -30,6 +30,50 @@
 		<Temperature min="-90" max="-50" prob="1"/> 	<!-- Default: min= (minus 60) max= (minus 30) -->
 	</append>
 
+	<!-- Decrease wasteland metal piles	and cinder block piles -->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='scrapMetalPile']/@prob">0.002</set>  <!--Default  0.015-->
+
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks01']/@prob">0.001</set>  <!--Default  0.006-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks02']/@prob">0.001</set>  <!--Default  0.006-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks03']/@prob">0.001</set>  <!--Default  0.006-->
+
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@name='waste_rubble_bldg_01']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@name='waste_rubble_bldg_02']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@name='waste_rubble_bldg_03']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@name='waste_rubble_bldg_09']/@prob">0.001</set>  <!--Default  0.002-->
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='wasteland']">
+		<decorations>
+			<decoration type="prefab" name="waste_rubble_bldg_04" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_05" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_06" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_07" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_08" prob=".0025"/>
+		</decorations>
+	</append>
+
+	<!-- Decrease wasteland hub metal piles	and cinder block piles -->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='scrapMetalPile']/@prob">0.002</set>  <!--Default  0.015-->
+
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks01']/@prob">0.001</set>  <!--Default  0.006-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks02']/@prob">0.001</set>  <!--Default  0.006-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks03']/@prob">0.001</set>  <!--Default  0.006-->
+
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@name='waste_rubble_bldg_01']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@name='waste_rubble_bldg_02']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@name='waste_rubble_bldg_03']/@prob">0.0015</set>  <!--Default  0.003-->
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@name='waste_rubble_bldg_09']/@prob">0.001</set>  <!--Default  0.002-->
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']">
+		<decorations>
+			<decoration type="prefab" name="waste_rubble_bldg_04" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_05" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_06" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_07" prob=".0025"/>
+			<decoration type="prefab" name="waste_rubble_bldg_08" prob=".0025"/>
+		</decorations>
+	</append>
+	
 	<!--	
 	remove saturation of snow biome   (both work - just need to decide if i should use it or not)
 	===============================
@@ -48,5 +92,30 @@
 	<remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/spectrum" />
 
 	<remove xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum" />
+
+	==========================================
+	<decorations>
+			<decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/>
+			<decoration type="block" blockname="treeDeadPineLeaf" prob ="0.010" rotatemax="7"/>
+			<decoration type="block" blockname="scrapMetalPile" prob =".015" rotatemax="3"/>
+			<decoration type="block" blockname="brickDestroyedBlock01" prob =".0004" rotatemax="7"/>
+			<decoration type="block" blockname="brickDestroyedBlock02" prob =".0004" rotatemax="7"/>
+			<decoration type="block" blockname="brickDestroyedBlock03" prob =".0004" rotatemax="7"/>
+			<decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/>
+			<decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/>
+			<decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/>
+			<decoration type="block" blockname="rockResource" prob =".02" checkresource="true" rotatemax="3"/>
+			<decoration type="block" blockname="rockResource02" prob =".02" checkresource="true" rotatemax="3"/>
+			<decoration type="block" blockname="cntBirdnest" prob ="0.002"/>
+			<decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/>
+			<decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/>
+			<decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/>
+			<decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/>
+			<decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/>
+			<decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/>
+			<decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/>
+			<decoration type="block" blockname="treeDeadShrub" prob="0.001" rotatemax="7"/>
+			<decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/>
+			<decoration type="block" blockname="treeDeadPineLeaf" prob ="0.010" rotatemax="7"/>
 	-->	
 </configs>
