@@ -5,7 +5,7 @@ NRZ_7JankTweaks
 
 Description:
 </br>
-	NRZ_7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay.
+	7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay.
 
        
 
@@ -40,7 +40,7 @@ Features:
 	</br>
 	Removed burnt forest dark smoke (haze and light smoke still there).
 	</br>
-	Adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it).
+	Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert will now raise your heat not lower it).
 	</br>
 	Burning barrels now give off heat like lit campfire does.
 	</br>
