@@ -17,4 +17,23 @@
 
     <!-- <remove xpath="/recipes/recipe[@name='gunCrossbow']" /> -->
 
+    <append xpath="/recipes/recipe[@name='cntSecureStorageChest']">
+	    <ingredient name="resourceScrapBrass" count="2"/>
+    </append>
+
+    <append xpath="/recipes/recipe[@name='secureDoorWooden']">
+	    <ingredient name="resourceScrapBrass" count="2"/>
+    </append>
+
+    <!-- Remove gascan recipe
+    <remove xpath="/recipes/recipe[@name='ammoGasCan']" />
+   
+    <recipe name="ammoGasCan" count="100" craft_area="chemistryStation" tags="learnable">
+	    <ingredient name="resourceOilShale" count="12"/>
+    </recipe>
+
+    <recipe name="ammoGasCan" count="600" craft_exp_gain="0" craft_time="5" always_unlocked="true">
+	    <ingredient name="oilBarrel" count="1"/>
+    </recipe>
+    -->
 </config>
