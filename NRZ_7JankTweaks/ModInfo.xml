@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.4" />
+		<Version value="1.5" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -57,6 +57,8 @@
 				adjusted hyper/hypo thermal resist of shirts, pants and caps.
 				slightly lowered aiming multiplier for smg, hunting rifle and sniper rifle.
 
+			(v1.5) july 17 2019
+				secure chest and secure wood door now also need 2 brass to craft.
 
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
