@@ -41,7 +41,6 @@
 	<property name="Explosion.DamageBonus.wood" value="130"/>
 	<property name="Explosion.DamageBonus.water" value="0"/>
 -->
-
 	<!--
 		(Add the E action back to wild plants)
 		
