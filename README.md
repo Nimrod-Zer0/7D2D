@@ -48,6 +48,21 @@ Features:
 	</br>
 	Thrown dynamite and explosive charge damages and explosive ranges adjusted to better relate to each other (Dynamite is 1 stick, Explosive Charge is 3 sticks bundled).
 	</br></br>
+	---Ammo Changes---</br>	
+	Shotgun Shells:</br> 
+		Pellets: have greatest chance of any ammo to dismember.</br> 
+		Slugs: headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.</br>
+	</br>
+	Blunderbuss:</br> 
+		Pellets: same as shotgun pellet ammo type but has more base damage.</br>
+	</br>	
+	Bullets:</br> 
+		9mm - headshots do 50% more damage, small chance to dismember on headshot.</br>
+		7.62mm - headshots do 150% more damage, headshots also has high chance to dismember, there is a chance of dismember for leg and arm shots.</br>
+		44 magnum - headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.</br>
+	</br>
+	Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
+	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>
 
