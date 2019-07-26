@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.5" />
+		<Version value="1.6" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -59,6 +59,23 @@
 
 			(v1.5) july 17 2019
 				secure chest and secure wood door now also need 2 brass to craft.
+
+			(v1.6) july 26 2019
+				===	Ammo Changes ===	
+				Shotgun Shells: 
+					Pellets: have greatest chance of any ammo to dismember. 
+					Slugs: headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
+
+				Blunderbuss: 
+					Pellets: same as shotgun pellet ammo type but has more base damage.
+
+				Bullets: 
+					9mm - headshots do 50% more damage, small chance to dismember on headshot.
+					7.62mm - headshots do 150% more damage, headshots also has high chance to dismember, there is a chance of dismember for leg and arm shots.
+					44 magnum - headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
+
+				Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
+
 
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
