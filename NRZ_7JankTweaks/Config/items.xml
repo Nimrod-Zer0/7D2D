@@ -435,89 +435,89 @@
 	<!--	First Aid Kit	-->
 	<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>						<!-- Default: 5 -->
 	
-<!--
-	<append xpath="/items/item[@name='thrownDynamite']">
-		<property name="Explosion.DamageBonus.cloth" value="130"/>
-		<property name="Explosion.DamageBonus.earth" value="130"/>
-		<property name="Explosion.DamageBonus.glass" value="130"/>
-		<property name="Explosion.DamageBonus.metal" value="130"/>
-		<property name="Explosion.DamageBonus.organic" value="130"/>
-		<property name="Explosion.DamageBonus.stone" value="130"/>
-		<property name="Explosion.DamageBonus.wood" value="130"/>
-		<property name="Explosion.DamageBonus.water" value="0"/>
+
+	<!--	
+		Ammo Changes	
+	===================
+	Shotgun Shells: 
+		Pellets: have greatest chance of any ammo to dismember. 
+		Slugs: headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
+	
+	Blunderbuss: 
+		Pellets: same as shotgun pellet ammo type but has more base damage.
+
+	Bullets: 
+		9mm - headshots do 50% more damage, small chance to dismember on headshot.
+		7.62mm - headshots do 150% more damage, headshots also has high chance to dismember, there is a chance of dismember for leg and arm shots.
+		44 magnum - headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
+
+
+	Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
+	-->
+
+	<!-- Shotgun Shell -->
+	<set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='MaxRange']/@value">18</set>			<!-- Default: 18 -->
+	<set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">1</set>	<!-- Default: 3 -->
+	
+	<remove xpath="/items/item[contains(@name, 'ammoShotgunShell')]/effect_group[@name='Base Effects']/passive_effect[@name='DismemberChance']" />
+	<append xpath="/items/item[contains(@name, 'ammoShotgunShell')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="perc_add" value="1.0"/>
 	</append>
--->
+	<!--
+	<remove xpath="/items/item[contains(@name, 'ammoShotgunShell') or contains(@name, 'ammoShotgunSlug')]/effect_group[@name='Base Effects']/passive_effect[@name='DismemberChance']" />
+	<append xpath="/items/item[contains(@name, 'ammoShotgunShell')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="base_set" value="0.35" tags="leg,arm"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="1" tags="head"/>
+	</append>
+	-->
+	<!-- Shotgun Slug -->
+	<set xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='MaxRange']/@value">25</set>				<!-- Default: 25 -->
+	<set xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">3</set>	<!-- Default: 3 -->
+	<append xpath="/items/item[contains(@name, 'ammoShotgunSlug')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="perc_add" value="0.85"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="1" tags="head"/>
+	</append>
 
-<!--
-=============================================================================
-thrown dynamite
-=============================================================================
-	<property name="Explosion.RadiusBlocks" value="3"/>
-	<property name="Explosion.RadiusEntities" value="6"/>
+	<!-- Blunderbuss -->
+	<set xpath="/items/item[@name='ammoBlunderbuss']/effect_group/passive_effect[@name='MaxRange']/@value">10</set>				<!-- Default: 18 -->
+	<set xpath="/items/item[@name='ammoBlunderbuss']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">1</set>	<!-- Default: 3 -->
 
-	<effect_group tiered="false">
-		<passive_effect name="BlockDamage" operation="base_set" value="900"/>
-		<display_value name="dExDamageBlock" value="900" />
-		<passive_effect name="EntityDamage" operation="base_set" value="680"/>
-		<display_value name="dExDamageEntity" value="680" />
-		<display_value name="dExRadius" value="6" />
-	</effect_group>
-=============================================================================
-explosive charge
-=============================================================================
-	<property name="Explosion.ParticleIndex" value="4"/>
-	<property name="Explosion.RadiusBlocks" value="5"/>
-	<property name="Explosion.RadiusEntities" value="5"/>
-	<property name="Explosion.BlockDamage" value="3000"/>
-	<property name="Explosion.EntityDamage" value="800"/>
+	<remove xpath="/items/item[contains(@name, 'ammoBlunderbuss')]/effect_group[@name='Base Effects']/passive_effect[@name='DismemberChance']" />
+	<append xpath="/items/item[contains(@name, 'ammoBlunderbuss')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="perc_add" value="1.25"/>
+	</append>
+	
+	<!-- 9mm Bullets -->
+	<append xpath="/items/item[contains(@name, 'ammo9mmBullet')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.15" tags="head"/>
+	</append>
 
-	<property name="Explosion.DamageBonus.cloth" value="130"/>
-	<property name="Explosion.DamageBonus.earth" value="130"/>
-	<property name="Explosion.DamageBonus.glass" value="130"/>
-	<property name="Explosion.DamageBonus.metal" value="130"/>
-	<property name="Explosion.DamageBonus.organic" value="130"/>
-	<property name="Explosion.DamageBonus.stone" value="130"/>
-	<property name="Explosion.DamageBonus.wood" value="130"/>
-	<property name="Explosion.DamageBonus.water" value="0"/>
--->
-<!-- Clothing changes 
+	<!-- 44 Magnum Bullets -->
+	<append xpath="/items/item[contains(@name, 'ammo44Magnum')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="perc_add" value="0.65"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="1" tags="head"/>
+	</append>
 
-		puffer coat - should be hotter in desert not cooler
-		sweatshirt - should be hotter in desert not cooler
+	<!-- 7.62mm Bullets -->
+	<append xpath="/items/item[contains(@name, 'ammo762mmBullet')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DismemberChance" operation="perc_add" value="0.5"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.85" tags="head"/>
+		<!--	<passive_effect name="DismemberChance" operation="base_set" value="0.25" tags="leg,arm"/>	-->
+	</append>
 
-		bdu top - should offer some insulation
-		bdu bottom - should offer some insulation
-
-		scrap armor - should be hot in desert and cold in snow
-		metal armor - should be hot in desert and cold in snow
-
-		leather armor - should be hot in desert
-
-		leather duster & jacket - should not be godlike insulator in any weather like they are.
-
-<item name="gothBootsBlack">
-<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
-
-<item name="wornBoots">
-<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
-
-<item name="dressShoes">
-<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="4"/>
-
-<item name="armyPants">
-<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
-
-<item name="armyShirt">
-<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>		
-
-<item name="hazmatGloves">
-<passive_effect name="HypothermalResist" operation="base_add" value="4"/>
-<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
--->
-
+	<!-- Arrows -->
+	<append xpath="/items/item[contains(@name, 'Arrow')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.25" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.1" tags="head"/>
+	</append>
+	
+	<!-- Bolts -->
+	<append xpath="/items/item[contains(@name, 'Bolt')]/effect_group[@name='Base Effects']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.25" tags="head"/>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.1" tags="head"/>
+	</append>
 </config>
