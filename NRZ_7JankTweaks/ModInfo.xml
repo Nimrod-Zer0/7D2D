@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.6" />
+		<Version value="1.6.2" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -76,6 +76,10 @@
 
 				Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
 
+			(1.6.2) Aug 30 2019
+				adjusted shotgun slug range and damage.
+				adjusted damage of blunderbuss.
+				added more variance to zombie knockdown recovery.
 
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
