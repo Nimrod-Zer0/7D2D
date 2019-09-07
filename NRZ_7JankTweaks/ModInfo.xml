@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.6.2" />
+		<Version value="1.6.3" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -81,6 +81,12 @@
 				adjusted damage of blunderbuss.
 				added more variance to zombie knockdown recovery.
 
+			(v1.6.3) Sep 7 2019
+				code cleanup.
+				added chance to get door knob and brass when destroying wood house doors.
+				Forgot to add Overalls to clothing temperature overhaul.  
+
+
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
 				Yucca fruit has smaller chance of food poisoning.
@@ -93,7 +99,7 @@
 				Removed seveal perks that didnt make any sence or made player way to over powered.
 				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4. 
 				Guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
-				Plants/crops can be picked up by pressing E again.
+				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up to but hitting it will harvest and leave seed like vanilla game)
 				Traders have more item count variance (min/max items they may have).
 				Removed burnt forest dark smoke (haze and light smoke still there).
 				Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert will now raise your heat not lower it)
