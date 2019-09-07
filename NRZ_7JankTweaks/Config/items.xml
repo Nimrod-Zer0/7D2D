@@ -459,6 +459,16 @@
 		</effect_group>
 	</append>
 
+	<!-- 	Overalls	-->
+	<remove xpath="/items/item[@name='overalls']/effect_group/passive_effect[@name='HypothermalResist']" />
+	<remove xpath="/items/item[@name='overalls']/effect_group/passive_effect[@name='HyperthermalResist']" />
+	<append xpath="/items/item[@name='overalls']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="8"/>				<!--Default: add 6-->
+			<passive_effect name="HyperthermalResist" operation="base_subtract" value="2"/>			<!--Default: add 4-->
+		</effect_group>
+	</append>
+	
 	<!-- 	cowboyHat	  -->
 	<remove xpath="/items/item[@name='cowboyHat']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='cowboyHat']/effect_group/passive_effect[@name='HyperthermalResist']" />
