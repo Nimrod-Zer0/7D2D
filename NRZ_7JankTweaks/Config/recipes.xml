@@ -14,18 +14,63 @@
     <remove xpath="/recipes/recipe[@name='gunRocketLauncher']" />
     <remove xpath="/recipes/recipe[@name='gunSMG5']" />
     <remove xpath="/recipes/recipe[@name='gunToolNailgun']" />
-
     <!-- <remove xpath="/recipes/recipe[@name='gunCrossbow']" /> -->
 
+    <!-- Remove military clothes from workbench so perfect quality clothes cant be crafted -->
+    <remove xpath="/recipes/recipe[@name='armorMilitaryBoots']" />
+    <remove xpath="/recipes/recipe[@name='armorMilitaryGloves']" />
+    <remove xpath="/recipes/recipe[@name='armorMilitaryHelmet']" />
+    <remove xpath="/recipes/recipe[@name='armorMilitaryLegs']" />
+    <remove xpath="/recipes/recipe[@name='armorMilitaryVest']" />
+    
+    <!-- Remove Tools from workbench so perfect quality tools cant be crafted -->
+    <remove xpath="/recipes/recipe[@name='meleeToolAuger']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolChainsaw']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolClawHammer']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolFireaxeIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolFireaxeSteel']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolHoeIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolHuntingKnife']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolMachete']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolPickaxeIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolPickaxeSteel']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolShovelIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolShovelSteel']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolSledgehammer']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolWrench']" />
+
+    <!-- Add brass to required resource to craft storage chest -->
     <append xpath="/recipes/recipe[@name='cntSecureStorageChest']">
 	    <ingredient name="resourceScrapBrass" count="2"/>
     </append>
 
+    <!-- Add brass to required resource to craft secureDoorWooden -->
     <append xpath="/recipes/recipe[@name='secureDoorWooden']">
 	    <ingredient name="resourceScrapBrass" count="2"/>
     </append>
 
-    <!-- Remove gascan recipe
+    <!-- Add brass to required resource to craft secureDoorWooden -->
+    <append xpath="/recipes/recipe[@name='secureDoorWooden']">
+	    <ingredient name="resourceScrapBrass" count="2"/>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="houseFrontDoor1_v1" count="1" craft_area="tablesaw">
+        	<ingredient name="resourceWood" count="10"/>
+        	<ingredient name="resourceDoorKnob" count="1"/>
+            <ingredient name="resourceScrapBrass" count="3"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="houseFrontDoor2_v1" count="1" craft_area="tablesaw">
+        	<ingredient name="resourceWood" count="10"/>
+        	<ingredient name="resourceDoorKnob" count="1"/>
+            <ingredient name="resourceScrapBrass" count="3"/>
+        </recipe>
+    </append>
+
+    <!-- Remove gascan recipe - the gas issue should be fixed in a18 so no need to mess with this
     <remove xpath="/recipes/recipe[@name='ammoGasCan']" />
    
     <recipe name="ammoGasCan" count="100" craft_area="chemistryStation" tags="learnable">
