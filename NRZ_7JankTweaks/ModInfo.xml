@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.6.3" />
+		<Version value="1.6.4" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -85,6 +85,12 @@
 				code cleanup.
 				added chance to get door knob and brass when destroying wood house doors.
 				Forgot to add Overalls to clothing temperature overhaul.  
+
+			(v1.6.4) Sep 10 2019
+				slightly increased light brightness of minibike.
+				adjusted chance to get brass from destroying wood doors.
+				removed military clothes, all the tools such as axe, pick, knife ect, ect from workbench (being able to craft flawless items completely defeats the need for looting.) 
+				added both houseFrontDoor items (Brown & White) to recipes to be crafted in tablesaw.
 
 
 			Features:
