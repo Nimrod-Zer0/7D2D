@@ -48,7 +48,7 @@
 	-->
     <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8,12</set>	<!-- Default: 13,20-->
     
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='headlight']/property[@name='bright']/@value">0.5</set>
+    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='headlight']/property[@name='bright']/@value">0.65</set>
 
     <!--
         <property name="cameraDistance" value="3, 4.5"/>
