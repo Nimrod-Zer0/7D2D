@@ -1,0 +1,90 @@
+<configs>
+	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\entitygroups.xml']" />
+
+    <!-- Wight Rad-->
+    <set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'WightRad')]/@name">zombieWightFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'WightRad')]/@name">zombieWightFeral</set>
+
+    <!-- Boe Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'BoeRad')]/@name">zombieBoeFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'BoeRad')]/@name">zombieBoeFeral</set>
+
+    <!-- FemaleFat Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'FemaleFatRad')]/@name">zombieFemaleFatFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'FemaleFatRad')]/@name">zombieFemaleFatFeral</set>
+
+    <!-- Joe Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'JoeRad')]/@name">zombieJoeFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'JoeRad')]/@name">zombieJoeFeral</set>
+
+    <!-- Moe Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'MoeRad')]/@name">zombieMoeFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'MoeRad')]/@name">zombieMoeFeral</set>
+
+    <!-- Arlene Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'ArleneRad')]/@name">zombieArleneFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'ArleneRad')]/@name">zombieArleneFeral</set>
+
+    <!-- Lab Rad    
+    ===================================================
+    i may keep this one in since its in a specific area 
+    ===================================================
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Group')]/entity[contains(@name, 'LabRad')]/@name">zombieLabFeral</set>
+    -->
+
+    <!-- Screamer Rad 
+    ==============================================
+    listed as a class but not used in EntityGroups
+    ==============================================
+    <set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'ScreamerRad')]/@name">zombieDarleneFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'ScreamerRad')]/@name">zombieDarleneFeral</set>
+    -->
+
+    <!-- Darlene Rad -->
+    <!-- <set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'DarleneRad')]/@name">zombieDarleneFeral</set> Not listed in zombie group -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'DarleneRad')]/@name">zombieDarleneFeral</set>
+
+    <!-- Marlene Rad -->
+    <set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'MarleneRad')]/@name">zombieMarleneFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'MarleneRad')]/@name">zombieMarleneFeral</set>
+
+    <!-- Yo Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'YoRad')]/@name">zombieYoFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'YoRad')]/@name">zombieYoFeral</set>
+
+    <!-- Steve Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'SteveRad')]/@name">zombieSteveFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'SteveRad')]/@name">zombieSteveFeral</set>
+
+    <!-- Spider Rad -->
+    <set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'SpiderRad')]/@name">zombieSpiderFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'SpiderRad')]/@name">zombieSpiderFeral</set>
+
+    <!-- FatCop Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'CopRad')]/@name">zombieFatCopFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'CopRad')]/@name">zombieFatCopFeral</set>
+
+    <!-- Soldier Rad / for soldiers the class is a lowercase z unlike the rest -->
+    <set xpath="/entitygroups/entitygroup[contains(@name, 'zombie')]/entity[contains(@name, 'SoldierRad')]/@name">zombieSoldierFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'SoldierRad')]/@name">zombieSoldierFeral</set>
+
+    <!-- Skateboarder Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'boarderRad')]/@name">zombieSkateboarderFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'boarderRad')]/@name">zombieSkateboarderFeral</set>
+
+    <!-- Cheerleader Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'leaderRad')]/@name">zombieCheerleaderFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'leaderRad')]/@name">zombieCheerleaderFeral</set>
+
+    <!-- OldTimer Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'TimerRad')]/@name">zombieOldTimerFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'TimerRad')]/@name">zombieOldTimerFeral</set>
+
+    <!-- Biker Rad -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Zombie')]/entity[contains(@name, 'BikerRad')]/@name">zombieBikerFeral</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'BikerRad')]/@name">zombieBikerFeral</set>
+
+    <!-- Vulture Rad-->
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'Horde')]/entity[contains(@name, 'VultureRad')]/@name">animalZombieVulture</set>
+</configs>
