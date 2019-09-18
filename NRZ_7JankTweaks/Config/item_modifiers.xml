@@ -8,4 +8,14 @@
         <set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0.05</set> 
     -->
 
+    <!-- Laser sight should not improve weapon handling (specially not more then a foregrip) -->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/effect_group/passive_effect[@name='WeaponHandling']/@value">0</set> <!-- Default: 0.2 -->
+
+    <!-- Reflex sight should not improve weapon handling (specially not more then a foregrip) -->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/effect_group/passive_effect[@name='WeaponHandling']/@value">0</set> <!-- Default: 0.3 -->
+
+    <!-- Increased weapon handling for foregrip (reflex sight and laser improved handling better then foregrip according to funpimps)-->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunForegrip']/effect_group/passive_effect[@name='WeaponHandling']/@value">0.2</set> <!-- Default: 0.15 -->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunForegrip']/effect_group/passive_effect[@name='KickDegreesVertical']/@value">0.25</set> <!-- Default: 0.5 -->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunForegrip']/effect_group/passive_effect[@name='KickDegreesHorizontal']/@value">0.25</set> <!-- Default: 0.5 -->
 </config>
