@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.6.4" />
+		<Version value="1.7.1" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -92,9 +92,18 @@
 				removed military clothes, all the tools such as axe, pick, knife ect, ect from workbench (being able to craft flawless items completely defeats the need for looting.) 
 				added both houseFrontDoor items (Brown & White) to recipes to be crafted in tablesaw.
 
-
 			(v1.7.0) Sep 13 2019
 				Replaced radiated zombies with ferals (No more stupid glowing zombies)
+
+			(v1.7.1) Sep 16 2019
+				Take all - icon and letter are no longer greyed out in inventory or loot ui's.
+				Adjusted DismemberChance for 7.62 ammo - (slightly lower).
+				Adjusted weapon handling and recoil for AK47 and SMG (added some kick to them - funpimps had ak as least recoil and best weapon handling in game).
+				Lowered shiv damage (they did more damage then bowie knife).
+				Removed addl weapon handling from installing a reflex scope (how does a scope improve handling of a weapon ?)
+				Removed addl weapon handling from laser sight (how does a laser sight improve handling of a weapon ?)
+				Increased weapon handling for installing Foregrip Mod (funpimps had this improving handling less then laser sight and reflex sight).
+				Decreased weapon kick stat for installing Foregrip Mod (was 0.5 reduction - now 0.25 reduction).
 
 
 			Features:
