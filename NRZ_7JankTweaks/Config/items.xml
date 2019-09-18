@@ -11,62 +11,64 @@
 	<!-- Lower chance of food poisening for corn -->
 	<set xpath="/items/item[@name='foodCropCorn']/effect_group/display_value[@name='FoodPoisoningRisk']/@value">0.05</set>	<!-- Default: 0.1 -->
 
-	<!--	
-	 	Credit goes to: Elucidus for this damage mod concept
 
-		 	ToDo:
-			 	fine tune damage bonuses - make sure top tier bow doesnt do more damage then top tier pistol for example.
-
-			Notes:
-				weapon mods like mag extender also give damage bonus even though there is no damage bonus listed in its config.
-				i wondered if bonus was for addl accuracy but there is no bonus to shot spread or variance in config.
-			 
-	-->
 	<!-- Remove Entity/Block Damage vars from all items -->
 	<remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']"/>
 	<remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage'][@operation='perc_add']"/>
 	
-	<!-- 
-		Add Entity/Block Damage vars back to all items along with vars for Quality 
-	=====================================================================
-	This is done this way so all items even knives, axe ect get damage bonus based on its quality level.	
-	-->
-	<append xpath="/items/item/effect_group[@name='Base Effects']">
+	<!-- Add Entity/Block Damage vars back to all guns and melee items along with vars for Quality -->
+	<append xpath="/items/item[contains(@name, 'melee')]/effect_group[@name='Base Effects']">
 		<passive_effect name="EntityDamage" operation="perc_add" value="0,1" tier="1,6"/>
 		<passive_effect name="BlockDamage" operation="perc_add" value="0,2" tier="1,6"/>
 	</append>
 
-	<!-- Modify Gun/Bow EntityDamage based on Quality Level -->
+	<append xpath="/items/item[contains(@name, 'gun')]/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,1" tier="1,6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,2" tier="1,6"/>
+	</append>
+
+	<!-- Modify AK47 EntityDamage based on Quality Level and adjust weapon handling (ak had the least recoil and weapon handling in game)-->
 	<set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>	<!-- -.2,.8 -->
-	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>	<!-- -.2,.8 -->
-	<set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>
-	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>  <!-- .25,1.25 -->
+	<set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/display_value[@name='dRecoil']/@value">12</set>  <!-- Default: 5 -->
+	<set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling']/@value">0.35</set>  <!-- Default: 0.7 -->
+	<set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/passive_effect[@name='KickDegreesVertical']/@value">0.5,1</set>  <!-- Default: 0.7 -->
+	<!-- <set xpath="/items/item[@name='gunAK47']/effect_group[@name='Base Effects']/passive_effect[@name='KickDegreesHorizontal']/@value">-0.3,0.3</set>   Default: 0.7 -->
 	
+	<!-- Modify SMG EntityDamage based on Quality Level and adjust weapon handling (ak had the least recoil and weapon handling in game)-->
+	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>	<!-- -.2,.8 -->
+	<!-- <set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.45</set>   Default: .35 -->
+	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/display_value[@name='dRecoil']/@value">7</set>  <!-- Default: 7 -->
+	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='WeaponHandling']/@value">0.45</set>  <!-- Default: 0.8 -->
+	
+	<!-- Modify Hunting Rifle damage based on quality and Lowered Aiming Multiplier -->
+	<set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>
+	<set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.065</set>  <!-- Default: 0.048 -->
+
+	<!-- Modify MR10 Sniper Rifle damage based on quality, Ammo Capacity, spread multiplier -->
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set>  <!-- .25,1.25 -->
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize']/@value">10</set>
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.075</set>  <!-- Default: 0.04 -->
+
+	<!-- Modify Blunderbuss damage based on quality, adjsut the max range and falloff damage -->
 	<set xpath="/items/item[@name='gunBlunderbuss']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">-.2,.8</set>	<!-- minus .2,.8 -->
 	<set xpath="/items/item[@name='gunBlunderbuss']/effect_group/passive_effect[@name='MaxRange']/@value">12</set>			<!-- Default: 18 -->
 	<set xpath="/items/item[@name='gunBlunderbuss']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">4</set>	<!-- Default: 3 -->
 	
+	<!-- Modify Blunderbuss damage based on quality, adjsut the max range and falloff damage (damage and falloff is handled in the ammo)-->
 	<set xpath="/items/item[@name='gunPumpShotgun']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">-.2,.8</set>	<!-- -.2,.8 -->
 	
-	<set xpath="/items/item[@name='gunCompoundBow']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.2,1.2</set>	<!-- .3,1.3 -->
+	<!-- Modify Crossbow damage based on quality -->
 	<set xpath="/items/item[@name='gunCrossbow']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.1,1.0</set>	<!-- .45,1.45 -->
 
-	<!-- Compound bow now shoots closer to the effective range of a crossbow like it should -->
+	<!-- Modify CompoundBow damage based on quality, adjust the velocity and falloff damage (Compound bow now shoots closer to the effective range of a crossbow like it should) -->
+	<set xpath="/items/item[@name='gunCompoundBow']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.2,1.2</set>	<!-- .3,1.3 -->
 	<set xpath="/items/item[@name='gunCompoundBow']/effect_group[@name='Base Effects']/passive_effect[@name='ProjectileVelocity'][@operation='perc_add']/@value">3.5</set>	<!-- 0.2 -->
 	<set xpath="/items/item[@name='gunCompoundBow']/effect_group[@name='Base Effects']/passive_effect[@name='DamageFalloffRange'][@operation='base_set']/@value">30</set>	<!-- 30 -->
 
-	<!-- Increase MR10 Sniper Rifle Ammo Capacity -->
-	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='MagazineSize']/@value">10</set>
+	<!-- Reduce Shiv damage (was more damage then bowie knife) -->
+	<set xpath="/items/item[@name='meleeBoneShiv']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">-0.35,0.3</set>
+	<set xpath="/items/item[@name='meleeCandyCaneShiv']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">-0.35,0.3</set>
 	
-	<!-- Lowered MR10 Sniper Rifle Aiming Multiplier -->
-	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.075</set>  <!-- Default: 0.04 -->
-	
-	<!-- Lowered Hunting Rifle Aiming Multiplier -->
-	<set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.065</set>  <!-- Default: 0.048 -->
-
-	<!-- Lowered Mp5 Aiming Multiplier -->
-	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.45</set>  <!-- Default: .35 -->
-
 	<!--	
 		Ammo Changes	
 	===================
@@ -127,10 +129,9 @@
 
 	<!-- 7.62mm Bullets -->
 	<append xpath="/items/item[contains(@name, 'ammo762mmBullet')]/effect_group[@name='Base Effects']">
-		<passive_effect name="DismemberChance" operation="perc_add" value="0.5"/>
+		<passive_effect name="DismemberChance" operation="perc_add" value="0.35"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="head"/>
-		<passive_effect name="DismemberChance" operation="base_set" value="0.85" tags="head"/>
-		<!--	<passive_effect name="DismemberChance" operation="base_set" value="0.25" tags="leg,arm"/>	-->
+		<passive_effect name="DismemberChance" operation="base_set" value="0.4" tags="head"/>
 	</append>
 
 	<!-- Arrows	-->
