@@ -65,4 +65,8 @@
 			</rect>
 		</rect>
 	</insertAfter>
+
+	<!-- Take all icon and letter are no longer greyed out in inventory or loot ui -->
+	<set xpath="/windows/window/panel/label[contains(@name, 'takeAllLabel')]/@color">[beige]</set>
+	<set xpath="/windows/window/panel/sprite[contains(@name, 'takeAllIcon')]/@color">[white]</set>
 </configs>
