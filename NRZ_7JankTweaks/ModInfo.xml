@@ -105,6 +105,10 @@
 				Increased weapon handling for installing Foregrip Mod (funpimps had this improving handling less then laser sight and reflex sight).
 				Decreased weapon kick stat for installing Foregrip Mod (was 0.5 reduction - now 0.25 reduction).
 
+			(v1.8.0) Sep 21 2019
+				Lowered meat harvest of animals.
+				Lowered meat requirements for recipes (no more 5 meat to make 1 cooked meat). 
+
 
 			Features:
 				Zombie dog, wolf, direwolf and both vulture types have less hp.
