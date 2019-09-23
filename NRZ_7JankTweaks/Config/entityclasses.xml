@@ -34,12 +34,41 @@
     <!--    <set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath']/@value">60</set>  -->  <!-- Default: 30 -->
         
     <!-- 
-    Increase Head Dismemberment chance
-    ==================================
-    seems to have no effect reguardless of value/this value is also modified in shotgun ammo but not regular ammo
-            <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DismemberMultiplierHead']/@value">5</set>
-    -->
+        Adjust Meat Harvest of animals (for changes to meat in recipes) 
+    =======================================================================
+    these are intentionally low due to the "The Huntsman" perk (can increase harvesting up to 100%) and the way higher tier weapons yield more harvest.
+    -->    
+    <set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
+    <set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
+    <set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
+    <set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">5</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">4</set>
+    <set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">1</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">5</set>
 </config>
+
+<!--
+r=foodRottingFlesh
+animalStag 30
+animalDoe 20
+animalRabbit 10
+animalChicken 10
+animalBear 50
+animalZombieBear 7 
+animalWolf 25
+animalDireWolf 35
+animalZombieVulture r 3
+animalZombieDog r 4
+animalSnake 10
+animalBoar 30
+animalBossGrace 100
+-->    
 
 <!--
     Radiated zombies
