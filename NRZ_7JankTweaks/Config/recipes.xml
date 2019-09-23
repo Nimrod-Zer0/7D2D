@@ -70,6 +70,10 @@
         </recipe>
     </append>
 
+    <!-- Adjust meat value in recipes (Who decided you need 5 meat to make 1 cooked meat ?) -->
+    <!-- <set xpath="/recipes/recipe[@name='meleeToolAuger']/ingredient[@name='foodRawMeat']/@count">1</set> -->
+    <set xpath="/recipes/recipe[contains(@name, 'food')]/ingredient[@name='foodRawMeat']/@count">1</set>
+
     <!-- Remove gascan recipe - the gas issue should be fixed in a18 so no need to mess with this
     <remove xpath="/recipes/recipe[@name='ammoGasCan']" />
    
