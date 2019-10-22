@@ -12,58 +12,31 @@ Description:
 
 Features:
 </br>
-	Zombie dog, wolf, direwolf and both vulture types have less hp.
-	</br>
-	Yucca fruit has smaller chance of food poisoning.
-	</br>
-	Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
-	</br>
-	Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
-	</br>
-	Increased zombie loot drop chance to 10% from 2%.
-	</br>
-	Added Food and Water Bars to main hud.
-	</br>
-	Crouching no longer gives massive damage increase. (why would crouching make any projectile do more damage..lol)
-	</br>
-	All weapons now have weapon damage modifier based on quality (higher quality weapons do more damage).
-	</br>
-	Removed seveal perks that didnt make any sence or made player way to over powered.
-	</br>
-	Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4.
-	</br> 
-	Guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
-	</br>
-	Plants/crops can be picked up by pressing E again.
-	</br>
-	Traders have more item count variance (min/max items they may have).
-	</br>
-	Removed burnt forest dark smoke (haze and light smoke still there).
-	</br>
-	Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert will now raise your heat not lower it).
-	</br>
-	Burning barrels now give off heat like lit campfire does.
-	</br>
-	Snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
-	</br>
-	Thrown dynamite and explosive charge damages and explosive ranges adjusted to better relate to each other (Dynamite is 1 stick, Explosive Charge is 3 sticks bundled).
-	</br>
-	Replaced radiated zombies with ferals (Glowing zombies are stupid).
-	</br></br>
-	---Ammo Changes---</br>	
-	Shotgun Shells:</br> 
-		Pellets: have greatest chance of any ammo to dismember.</br> 
-		Slugs: headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.</br>
-	</br>
-	Blunderbuss:</br> 
-		Pellets: same as shotgun pellet ammo type but has more base damage.</br>
-	</br>	
-	Bullets:</br> 
-		9mm - headshots do 50% more damage, small chance to dismember on headshot.</br>
-		7.62mm - headshots do 150% more damage, headshots also has high chance to dismember, there is a chance of dismember for leg and arm shots.</br>
-		44 magnum - headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.</br>
-	</br>
-	Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
+	All Animal hitpoints have been adjusted.
+				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)</br>
+				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)</br>
+				Increased zombie loot drop chance to 5% from 2%.</br>
+				Added Food, Water and Core Temp Bars to main hud.</br>
+				Removed ability to craft any weapon or tools from workbench. (i feel crafting max quality weapons/tools takes away from looting in a game where you are suppose to go looting)</br>
+				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4.</br>
+				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up, but hitting it will harvest it and leave seed like vanilla game)</br>
+				Traders have more item count variance. (min/max items they may have)</br>
+				Removed burnt forest dark smoke. (haze and light smoke still there)</br>
+				Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert on a hot day will now massively raise your heat not lower it)</br>
+				Burning barrels now give off heat like lit campfire does.</br>
+				Adjusted min/max temperatures for Snow biome. (can get slightly warmer or much colder. so right clothes matter now to survive)</br>
+				Adjusted min/max temperatures for Desert biome. (slightly lowered max temp due to clothing changes. so right clothes matter now to survive)</br>
+				Removed Irradiated zombies. (They are replaced with feral versions of same type)</br>
+				Adjusted all meat harvest values of animals.	(you no longer need 5 meat to make 1 cooked meat basically)</br>
+				Adjusted meat req of food recipes to be crafted. (you no longer need 5 meat to make 1 cooked meat basically)</br>
+				Adjuster gascan req for explosive items to be crafted.</br>
+				Adjuster gunpowder req for explosive items to be crafted.</br>
+				Adjusted the amount of gas you can get from fuel pumps, barrels and cars.</br>
+				Adjusted gunMR10 to have a 10 round magazine.</br>
+				Adjusted handling and kick of AK47 and M60. (funpimps gave this weapon the best handling and least recoil of any other weapon for some reason)</br>
+				Adjusted handling of smg. (slightly better handling)</br> 
+				Reduced melee reach of zombies a bit.</br> 
+				Added a bit more variance to how long a zombie can stand back up after being knocked down.</br>
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>
@@ -83,7 +56,7 @@ This mod is safe to use/remove at any time. there have been many times where i u
 Note:
 </br>
 This is just me playing/testing/learning the xpath mod sytem.
-There is barely any documentation on xpath and none of it is official from fun pimps.
+There is barely any documentation on xpath usage for 7 days to die and none of it is official from fun pimps.
 If you're running a dedicated server you need only run this mod on the server and any clients will automatically recieve the updated Mod info.
 </br></br>
 I have no idea what happens when using multiple mods (using the xpath system) at the same time so i would not recommend it unless you are specifically testing compatibility and are aware that there may be issues or crashes.
