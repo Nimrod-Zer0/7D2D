@@ -11,26 +11,10 @@
 		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
 	</append>
 
-	<!--	Explosive Charge	-->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.RadiusEntities']/@value">7</set>	<!-- Default: 5 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.EntityDamage']/@value">1600</set>	<!-- Default: 800 -->
-
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.RadiusBlocks']/@value">5</set>		<!-- Default: 5 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.BlockDamage']/@value">3000</set>	<!-- Default: 3000 -->
-
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.cloth']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.earth']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.glass']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.metal']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.organic']/@value">130</set>	<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.stone']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.wood']/@value">130</set>		<!-- Default: 130 -->
-	<set xpath="/blocks/block[@name='tnt']/property[@name='Explosion.DamageBonus.water']/@value">130</set>		<!-- Default: 130 -->
-
 	<!-- Add chance to get brass from hinges and a doorknob back from harvesting -->
 	<append xpath="/blocks/block[@name='houseFrontDoor1_v1']">
-		<drop event="Harvest" name="resourceDoorKnob" count="0,1" prob="0.35" tag="oreWoodHarvest"/>
-		<drop event="Harvest" name="resourceScrapBrass" count="1,2" prob="0.4" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceDoorKnob" count="0,1" prob="0.4" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceScrapBrass" count="1,2" prob="0.45" tag="oreWoodHarvest"/>
 	</append>
 
 	<!-- Add the E pickup action back to wild plants and crops -->	
@@ -42,4 +26,14 @@
 	<append xpath="/blocks/block[@name='mushroom01']">
 		<property name="CanPickup" value="true" param1="foodCropMushrooms"/>
 	</append>
+
+	<!-- Reduce Harvesting of gas from vehicles -->
+	<!-- Doesnt exist since A18 (b143) <set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='ammoGasCan' and @tag='allHarvest']/@count">0,50</set> -->		<!-- Default: 50,500 -->
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,50</set>	<!-- Default: 50,500 -->
+
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='ammoGasCan' and @tag='allHarvest']/@count">0,50</set>		<!-- Default: 50,500 -->
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,50</set>	<!-- Default: 50,500 -->
+
+	<set xpath="/blocks/block[@name='cntBusSchool']/drop[@name='ammoGasCan' and @tag='allHarvest']/@count">0,75</set>			<!-- Default: 100,1000 -->
+	<set xpath="/blocks/block[@name='cntBusSchool']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,75</set>		<!-- Default: 100,1000 -->
 </configs>
