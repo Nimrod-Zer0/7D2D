@@ -3,5 +3,5 @@
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\buffs.xml']" />
 
     <!-- Remove the weather survival buff for newbies (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)-->
-    <remove xpath="/buffs/buff[@name='buffStatusCheck']/effect_group/triggered_effect[@buff='buffNewbieCoat']" />
+    <remove xpath="/buffs/buff[@name='buffNewbieCoat']" />
 </config>
