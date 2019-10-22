@@ -36,13 +36,7 @@
     <!-- Reduce Coyote health -->
     <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">50</set>
     <!-- <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@operation='base_set']/@value">50</set> -->   <!-- Default: 80 -->
-<!--
-    <set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,50</set>
-    <effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="100"/>
-		<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
-	</effect_group>
--->
+
 
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Immunity']/@value">sickness;disease;wellness;bleeding</set>
