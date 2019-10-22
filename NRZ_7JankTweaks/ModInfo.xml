@@ -4,131 +4,73 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.7.1" />
+		<Version value="0.1.0" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
-			(appdata/7DaystoDie/Saves/<worldname>/<savegamename>/Configs is where they export to)
+			(appdata/7DaystoDie/Saves/<worldname>/<savegamename>/Configs = is where they export to)
 
-			(12-18-2018) v0.1.0:
-				Reduced intro basic survival tasks to just build campfire.
-				Adjusted total skill points for completing task to 6 and 1000 xp for completing basic survival task.
-				Zombie dog, wolf, direwolf and both vulture types have less hp.
-				Yucca fruit has smaller chance of food poisoning.
+			(10-10-2019) v0.1.0:
+				All Animal hitpoints have been adjusted.
 				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
-				Increased zombie loot drop chance to 10% from 2%.
-		
-			(1-11-2019) 	
-				Added Food and Water Bars to main hud.
-				All weapons now have weapon damage modifier based on quality (higher quality weapons do more damage). 
-
-			(1-31-2019)	
-				Removed seveal perks that didnt make any sence or made player way to over powered.
-
-			(5/20/2019)
-				removed mod xp multiplier as it was added to base game finally.
-				temp removed some mod perk changes as all new dumb ass perks were added by joel for a17.3
-				temp removed cut down initial beginner quest tasks.
-				adjusted weapon damage for guns.
-				adjusted light brightness, speed and handling on bike, minibike, motorcycle and 4x4. 
-				guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
-				plants/crops can be picked up by pressing E again. 
-				adjusted food/water hud to look more like the health/stam stats. (water progress bar no longer working with a17.3 - text is fine)
-				removed massive dark smoke from burnt forest biome.
-
-			(v1.1)
-				decreased chance of mining helmet spawn in cars. (way to easy to find one)
-				Compound bow now shoots closer to the effective range of a crossbow like it should.
-				adjusted Hypo/Hyper thermal Resistance of dusters, jackets, sweatshirts, and scrap, iron, steel armors. (putting on a puffer coat in desert will now raise your heat not lower it)
-				burning barrels now give off heat like lit campfire does.
-				snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
-
-			(v1.2) june 21 2019
-				adjust zombie dog and rad vulture health slightly.
-				adjusted thrown dynamite damage and explosion range. (1 stick)
-				adjusted explosive charge entity damage and explosion range. (3 sticks bundled)
-							
-			(v1.3) june 24 2019
-				adjusted Zombie dog, wolf, direwolf and both vultures health a bit (slightly higher since weapon damage was adjusted).
-				first aid kit stack size increased to 10.
-			
-			(v1.4) july 5 2019
-				adjusted hyper/hypo thermal resist of shirts, pants and caps.
-				slightly lowered aiming multiplier for smg, hunting rifle and sniper rifle.
-
-			(v1.5) july 17 2019
-				secure chest and secure wood door now also need 2 brass to craft.
-
-			(v1.6) july 26 2019
-				===	Ammo Changes ===	
-				Shotgun Shells: 
-					Pellets: have greatest chance of any ammo to dismember. 
-					Slugs: headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
-
-				Blunderbuss: 
-					Pellets: same as shotgun pellet ammo type but has more base damage.
-
-				Bullets: 
-					9mm - headshots do 50% more damage, small chance to dismember on headshot.
-					7.62mm - headshots do 150% more damage, headshots also has high chance to dismember, there is a chance of dismember for leg and arm shots.
-					44 magnum - headshots do 150% more damage, headshots also dismember, there is a chance of dismember for leg and arm shots.
-
-				Arrows & Bolts: headshots do 25% more damage, small chance to dismember on headshot.
-
-			(v1.6.2) Aug 30 2019
-				adjusted shotgun slug range and damage.
-				adjusted damage of blunderbuss.
-				added more variance to zombie knockdown recovery.
-
-			(v1.6.3) Sep 7 2019
-				code cleanup.
-				added chance to get door knob and brass when destroying wood house doors.
-				Forgot to add Overalls to clothing temperature overhaul.  
-
-			(v1.6.4) Sep 10 2019
-				slightly increased light brightness of minibike.
-				adjusted chance to get brass from destroying wood doors.
-				removed military clothes, all the tools such as axe, pick, knife ect, ect from workbench (being able to craft flawless items completely defeats the need for looting.) 
-				added both houseFrontDoor items (Brown & White) to recipes to be crafted in tablesaw.
-
-			(v1.7.0) Sep 13 2019
-				Replaced radiated zombies with ferals (No more stupid glowing zombies)
-
-			(v1.7.1) Sep 16 2019
-				Take all - icon and letter are no longer greyed out in inventory or loot ui's.
-				Adjusted DismemberChance for 7.62 ammo - (slightly lower).
-				Adjusted weapon handling and recoil for AK47 and SMG (added some kick to them - funpimps had ak as least recoil and best weapon handling in game).
-				Lowered shiv damage (they did more damage then bowie knife).
-				Removed addl weapon handling from installing a reflex scope (how does a scope improve handling of a weapon ?)
-				Removed addl weapon handling from laser sight (how does a laser sight improve handling of a weapon ?)
-				Increased weapon handling for installing Foregrip Mod (funpimps had this improving handling less then laser sight and reflex sight).
-				Decreased weapon kick stat for installing Foregrip Mod (was 0.5 reduction - now 0.25 reduction).
-
-			(v1.8.0) Sep 21 2019
-				Lowered meat harvest of animals.
-				Lowered meat requirements for recipes (no more 5 meat to make 1 cooked meat). 
+				Increased zombie loot drop chance to 5% from 2%.
+				Added Food, Water and Core Temp Bars to main hud.
+				Removed ability to craft any weapon or tools from workbench. (i feel crafting max quality weapons/tools takes away from looting in a game where you are suppose to go looting) 
+				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4. 
+				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up to but hitting it will harvest and leave seed like vanilla game)
+				Traders have more item count variance. (min/max items they may have)
+				Removed burnt forest dark smoke. (haze and light smoke still there)
+				Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert on a hot day will now massively raise your heat not lower it)
+				Burning barrels now give off heat like lit campfire does.
+				Adjusted min/max temperatures for Snow biome. (can get slightly warmer or much colder. so right clothes matter now to survive)
+				Adjusted min/max temperatures for Desert biome. (slightly lowered max temp due to clothing changes. so right clothes matter now to survive)
+				Removed Irradiated zombies. (They are replaced with feral versions of same type)
+				Added both houseFrontDoor items to tablesaw item so they can be crafted.
+				When chopping houseFrontDoor items there is a chance to get brass.
+				Adjusted all meat harvest values of animals.	(you no longer need 5 meat to make 1 cooked meat basically)
+				Adjusted meat req of food recipes to be crafted. (you no longer need 5 meat to make 1 cooked meat basically)
+				Adjuster gascan req for explosive items to be crafted.
+				Adjuster gunpowder req for explosive items to be crafted.
+				Adjusted the amount of gas you can get from fuel pumps, barrels and cars.
+				Adjusted gunMR10 to have a 10 round magazine.
+				Adjusted handling and kick of AK47 and M60. (funpimps gave these weapons the best handling and least recoil of any other weapon for some reason)
+				Adjusted handling of smg. (slightly better handling) 
+				Reduced melee reach of zombies a bit. 
+				Removed extra weapon handling player got from installing laser sight item on weapon. (laser sight aids aiming, it does nothing for recoil or handling)
+				Removed extra weapon handling player got from installing reflex sight item on weapon. (reflex sight aids aiming, it does nothing for recoil or handling)
+				Slightly increased extra weapon handling player got from installing foregrip item on weapon.
+				Reduced the amount of recoil reduction the foregrip item gives when installed on a weapon. (funpimps had it at 50% reduction when installed)
+				Added a bit more variance to how long a zombie can stand back up after being knocked down.
+				Adjust Hypo/Hyper thermalResist of hat skins to match the actual item.
 
 
 			Features:
-				Zombie dog, wolf, direwolf and both vulture types have less hp.
-				Yucca fruit has smaller chance of food poisoning.
+				All Animal hitpoints have been adjusted.
 				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
-				Increased zombie loot drop chance to 10% from 2%.
-				Added Food and Water Bars to main hud.
-				Crouching no longer gives massive damage increase. (why would crouching make any projectile do more damage..lol)
-				All weapons now have weapon damage modifier based on quality (higher quality weapons do more damage).
-				Removed seveal perks that didnt make any sence or made player way to over powered.
+				Increased zombie loot drop chance to 5% from 2%.
+				Added Food, Water and Core Temp Bars to main hud.
+				Removed ability to craft any weapon or tools from workbench. (i feel crafting max quality weapons/tools takes away from looting in a game where you are suppose to go looting)
 				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4. 
-				Guns can NOT be crafted (removed from workbench so flawless guns cant be crafted from scraps)
 				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up to but hitting it will harvest and leave seed like vanilla game)
-				Traders have more item count variance (min/max items they may have).
-				Removed burnt forest dark smoke (haze and light smoke still there).
-				Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert will now raise your heat not lower it)
+				Traders have more item count variance. (min/max items they may have)
+				Removed burnt forest dark smoke. (haze and light smoke still there)
+				Adjusted Hypo/Hyper thermal Resistance of most wearable items. (putting on a puffer coat in desert on a hot day will now massively raise your heat not lower it)
 				Burning barrels now give off heat like lit campfire does.
-				Snow biome min/max temps adjusted (can get much colder so right clothes matter now to survive).
-				Thrown dynamite and explosive charge damages and explosive ranges adjusted to better relate to each other (Dynamite is 1 stick, Explosive Charge is 3 sticks bundled).
+				Adjusted min/max temperatures for Snow biome. (can get slightly warmer or much colder. so right clothes matter now to survive)
+				Adjusted min/max temperatures for Desert biome. (slightly lowered max temp due to clothing changes. so right clothes matter now to survive)
+				Removed Irradiated zombies. (They are replaced with feral versions of same type)
+				Adjusted all meat harvest values of animals.	(you no longer need 5 meat to make 1 cooked meat basically)
+				Adjusted meat req of food recipes to be crafted. (you no longer need 5 meat to make 1 cooked meat basically)
+				Adjuster gascan req for explosive items to be crafted.
+				Adjuster gunpowder req for explosive items to be crafted.
+				Adjusted the amount of gas you can get from fuel pumps, barrels and cars.
+				Adjusted gunMR10 to have a 10 round magazine.
+				Adjusted handling and kick of AK47 and M60. (funpimps gave this weapon the best handling and least recoil of any other weapon for some reason)
+				Adjusted handling of smg. (slightly better handling) 
+				Reduced melee reach of zombies a bit. 
+				Added a bit more variance to how long a zombie can stand back up after being knocked down.
 		-->
 		<Website value="" />
 	</ModInfo>
