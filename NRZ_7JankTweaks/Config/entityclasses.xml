@@ -3,54 +3,81 @@
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\entityclasses.xml']" />
 
     <!-- Reduce Snake health -->
-    <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@operation='base_set']/@value">10</set>   <!-- Default: 10 -->
+    <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">10</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@operation='base_set']/@value">10</set> -->  <!-- Default: 10 -->
 
-    <!-- Reduce Wolf health -->
-    <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@operation='base_set']/@value">90</set>    <!-- Default: 140 -->
+    <!-- Reduce Wolf health (MountainLion inherates from this) -->
+    <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@operation='base_set']/@value">90</set> -->   <!-- Default: 140 -->
 
     <!-- Reduce DireWolf health -->
-    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@operation='base_set']/@value">150</set>   <!-- Default: 250 -->
+    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">175</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@operation='base_set']/@value">175</set> -->  <!-- Default: 250 -->
     
     <!-- Reduce zombie twirly dog health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@operation='base_set']/@value">75</set>   <!-- Default: 100 -->
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">75</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@operation='base_set']/@value">75</set> -->  <!-- Default: 100 -->
     
     <!-- Reduce zombie vulture health health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@operation='base_set']/@value">25</set>   <!-- Default: 30 -->
+    <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">25</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@operation='base_set']/@value">25</set> -->  <!-- Default: 30 -->
 
     <!-- Reduce zombie vulture (Rad) health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@operation='base_set']/@value">55</set>   <!-- Default: 120 -->
+    <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">55</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@operation='base_set']/@value">55</set> -->  <!-- Default: 120 -->
+
+    <!-- Increase Stag health -->
+    <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>  <!-- 125 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@operation='base_set']/@value">125</set> -->   <!-- Default: 100 -->
+
+    <!-- Increase Doe health -->
+    <set xpath="/entity_classes/entity_class[@name='animalDoe']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">85</set> <!-- 100 Default: 50 -->
+
+    <!-- Reduce Coyote health -->
+    <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">50</set>
+    <!-- <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@operation='base_set']/@value">50</set> -->   <!-- Default: 80 -->
+<!--
+    <set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,50</set>
+    <effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="100"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+	</effect_group>
+-->
 
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Immunity']/@value">sickness;disease;wellness;bleeding</set>
 
     <!-- Increased chance for zombie to drop loot -->
-    <set xpath="/entity_classes/entity_class/property[@name='LootDropProb']/@value">0.1</set>  <!-- Default: 0.02 -->
+    <set xpath="/entity_classes/entity_class/property[@name='LootDropProb']/@value">0.05</set>  <!-- Default: 0.02 -->
     
     <!-- Adjust the stun times for a little more variance -->
-    <set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">0.045,4.5</set>   <!-- Default: 0.045,0.045 -->
-    <set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">0.5,3.0</set>     <!-- Default: 0.5,1.8 -->
+    <set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">0.045,2.5</set>   <!-- Default: 0.045,0.045 -->
+    <set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">0.5,2.0</set>     <!-- Default: 0.5,1.8 -->
 
     <!-- Make corpse stick around a bit longer -->
-    <!--    <set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath']/@value">60</set>  -->  <!-- Default: 30 -->
+    <!-- <set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath']/@value">60</set>  -->  <!-- Default: 30 -->
         
     <!-- 
         Adjust Meat Harvest of animals (for changes to meat in recipes) 
     =======================================================================
     these are intentionally low due to the "The Huntsman" perk (can increase harvesting up to 100%) and the way higher tier weapons yield more harvest.
     -->    
-    <set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
-    <set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
+    <!-- Meat harvest Adjustments (Small to Large) -->
     <set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
-    <set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
-    <set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">5</set>
-    <set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">4</set>
-    <set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
-    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">2</set>
+    <set xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">4</set>
+    <set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">5</set>
+    <set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">7</set>
+    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">8</set>
+    <set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">8</set>
+    <set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">10</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">10</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">20</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">25</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">12</set>
     <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">1</set>
-    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">2</set>
-    <set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">1</set>
-    <set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">3</set>
-    <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat' and @tag='butcherHarvest']/@count">5</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">3</set>
 </config>
 
 <!--
@@ -92,9 +119,3 @@ animalBossGrace 100
 <entity_class name="zombieOldTimerRadiated" extends="zombieOldTimerFeral">
 <entity_class name="zombieBikerRadiated" extends="zombieBikerFeral">
 -->
-
-
-
-
-
-
