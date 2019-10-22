@@ -1,5 +1,5 @@
 # 7D2D
-7 Days To Die (Mods)
+7 Days To Die (A18 Mods)
 
 NRZ_7JankTweaks
 
