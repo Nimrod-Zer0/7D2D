@@ -2,11 +2,16 @@
     <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\recipes.xml']" />
 
-    <!-- Remove guns from workbench so perfect qualiy weapons cant be crafted (or any quality for that mater)-->
+    <!--
+        In a game where you should be out looting i find it very stupid you can unlock a skill or read a book that allows crafting any weapon or tool at max tier.
+    -->
+
+    <!-- Remove guns from workbench so perfect qualiy weapons cant be crafted (or any quality for that matter) -->
     <remove xpath="/recipes/recipe[@name='gun44Magnum']" />
     <remove xpath="/recipes/recipe[@name='gunAK47']" />
     <remove xpath="/recipes/recipe[@name='gunBlunderbuss']" />
-    <remove xpath="/recipes/recipe[@name='gunCompoundBow']" />
+    <remove xpath="/recipes/recipe[@name='gunBowWooden']" />
+    <remove xpath="/recipes/recipe[@name='gunBowCompound']" />
     <remove xpath="/recipes/recipe[@name='gunHuntingRifle']" />
     <remove xpath="/recipes/recipe[@name='gunMR10']" />
     <remove xpath="/recipes/recipe[@name='gunPistol']" />
@@ -14,9 +19,36 @@
     <remove xpath="/recipes/recipe[@name='gunRocketLauncher']" />
     <remove xpath="/recipes/recipe[@name='gunSMG5']" />
     <remove xpath="/recipes/recipe[@name='gunToolNailgun']" />
-    <!-- <remove xpath="/recipes/recipe[@name='gunCrossbow']" /> -->
+    <remove xpath="/recipes/recipe[@name='gunCrossbowCompound']" />
+    <remove xpath="/recipes/recipe[@name='gunM60']" />
+    <remove xpath="/recipes/recipe[@name='gunDoubleBarrelShotgun']" />
+    <remove xpath="/recipes/recipe[@name='thrownGrenade']" />
+    <remove xpath="/recipes/recipe[@name='thrownGrenadeContact']" />
+    <remove xpath="/recipes/recipe[@name='ammoRocketFrag']" />
+    <remove xpath="/recipes/recipe[@name='ammoRocketHE']" />
 
-    <!-- Remove military clothes from workbench so perfect quality clothes cant be crafted -->
+
+    <!-- Make gun require more specific weapon parts in order to craft -->
+<!--
+    <set xpath="/recipes/recipe[@name='gun44Magnum']/ingredient[@name='gunPistolParts']/@count">15</set>                            
+    <set xpath="/recipes/recipe[@name='gunAK47']/ingredient[@name='gunAk47Parts']/@count">25</set>                                  
+    <set xpath="/recipes/recipe[@name='gunM60']/ingredient[@name='gunAk47Parts']/@count">30</set>                                   
+    <set xpath="/recipes/recipe[@name='gunJunkTurret']/ingredient[@name='gunJunkTurretParts']/@count">65</set>                      
+    <set xpath="/recipes/recipe[@name='gunBowCompound']/ingredient[@name='gunBowWoodenParts']/@count">25</set>                      
+    <set xpath="/recipes/recipe[@name='gunCrossbowCompound']/ingredient[@name='gunBowWoodenParts']/@count">25</set>                 
+    <set xpath="/recipes/recipe[@name='gunHuntingRifle']/ingredient[@name='gunHuntingRifleParts']/@count">15</set>                  
+    <set xpath="/recipes/recipe[@name='gunMR10']/ingredient[@name='gunHuntingRifleParts']/@count">25</set>                          
+    <set xpath="/recipes/recipe[@name='gunPistol']/ingredient[@name='gunPistolParts']/@count">15</set>                              
+    <set xpath="/recipes/recipe[@name='gunDoubleBarrelShotgun']/ingredient[@name='gunDoubleBarrelShotgunParts']/@count">10</set>    
+    <set xpath="/recipes/recipe[@name='gunPumpShotgun']/ingredient[@name='gunDoubleBarrelShotgunParts']/@count">15</set>            
+    <set xpath="/recipes/recipe[@name='gunRocketLauncher']/ingredient[@name='gunRocketLauncherParts']/@count">35</set>              
+    <set xpath="/recipes/recipe[@name='gunSMG5']/ingredient[@name='gunPistolParts']/@count">25</set>                                
+-->
+    <!-- Make guns require more overall parts to craft -->
+    <!-- <set xpath="/recipes/recipe[contains(@name, 'gun')]/effect_group/passive_effect[@name='CraftingIngredientCount']/@value">0,5</set> -->     <!-- Default: 0,5 -->
+
+
+    <!-- Remove military clothes from workbench so perfect quality military clothes cant be crafted -->
     <remove xpath="/recipes/recipe[@name='armorMilitaryBoots']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryGloves']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryHelmet']" />
@@ -29,25 +61,83 @@
     <remove xpath="/recipes/recipe[@name='meleeToolClawHammer']" />
     <remove xpath="/recipes/recipe[@name='meleeToolFireaxeIron']" />
     <remove xpath="/recipes/recipe[@name='meleeToolFireaxeSteel']" />
-    <remove xpath="/recipes/recipe[@name='meleeToolHoeIron']" />
-    <remove xpath="/recipes/recipe[@name='meleeToolHuntingKnife']" />
-    <remove xpath="/recipes/recipe[@name='meleeToolMachete']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolKnifeIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolKnifeMachete']" />
     <remove xpath="/recipes/recipe[@name='meleeToolPickaxeIron']" />
     <remove xpath="/recipes/recipe[@name='meleeToolPickaxeSteel']" />
     <remove xpath="/recipes/recipe[@name='meleeToolShovelIron']" />
     <remove xpath="/recipes/recipe[@name='meleeToolShovelSteel']" />
-    <remove xpath="/recipes/recipe[@name='meleeToolSledgehammer']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolSledgehammerIron']" />
+    <remove xpath="/recipes/recipe[@name='meleeToolSledgehammerSteel']" />
     <remove xpath="/recipes/recipe[@name='meleeToolWrench']" />
+
+
+
+    <!-- Molotov Cocktail (Decrease ammoGasCan resource req) -->
+    <set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']/ingredient[@name='ammoGasCan']/@count">25</set> <!-- Default: 300 -->
+
+    <!-- 
+        PipeBomb (Increase gunpowder resource req) 
+    =================================================
+    this was suppose to be incresed to 25 but because grenades cant be altered for some reason this is staying default for now.    
+    
+    <set xpath="/recipes/recipe[@name='thrownAmmoPipeBomb']/ingredient[@name='resourceGunPowder']/@count">12</set>
+
+
+    Grenades can not be altered via xpath as they throw an error no matter what.
+    Thrown grenades throw an error when trying to overide a stas for some reason  = Default 14 
+    ==========================================================================================
+    
+    <set xpath="/recipes/recipe[contains(@name, 'thrownGrenade')]/ingredient[@name='resourceGunPowder']/@count">30</set>
+
+    <set xpath="/recipes/recipe[@name='thrownGrenade']/ingredient[@name='resourceGunPowder']/@count">30</set>
+
+    <set xpath="/recipes/recipe[@name='thrownGrenadeContact']/ingredient[@name='resourceGunPowder']/@count">30</set>
+-->
+    
+    <!-- Timed Charge (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='thrownTimedCharge']/ingredient[@name='resourceGunPowder']/@count">50</set> <!-- Default: 25 -->
+
+    <!-- Dynamite (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='thrownDynamite']/ingredient[@name='resourceGunPowder']/@count">150</set> <!-- Default: 20 -->
+
+    <!-- RocketFrag (Increase gunpowder resource req) -->
+    <!-- <set xpath="/recipes/recipe[@name='ammoRocketFrag']/ingredient[@name='resourceGunPowder']/@count">100</set> --> <!-- Default: 15 -->
+
+    <!-- RocketFrag (Decrease ammoGasCan resource req) -->
+    <!-- <set xpath="/recipes/recipe[@name='ammoRocketFrag']/ingredient[@name='ammoGasCan']/@count">300</set> --> <!-- Default: 500 -->
+
+    <!-- RocketHE (Increase gunpowder resource req) -->
+    <!-- <set xpath="/recipes/recipe[@name='ammoRocketHE']/ingredient[@name='resourceGunPowder']/@count">100</set> --> <!-- Default: 15 -->
+
+    <!-- RocketHE (Decrease ammoGasCan resource req) -->
+    <!-- set xpath="/recipes/recipe[@name='ammoRocketHE']/ingredient[@name='ammoGasCan']/@count">300</set> --> <!-- Default: 500 -->
+
+    <!-- Candy Tin Mine (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='mineCandyTin']/ingredient[@name='resourceGunPowder']/@count">15</set> <!-- Default: 8 -->
+
+    <!-- Hubcap Mine (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='mineHubcap']/ingredient[@name='resourceGunPowder']/@count">30</set> <!-- Default: 13 -->
+
+    <!-- Air Filter Mine (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='mineAirFilter']/ingredient[@name='resourceGunPowder']/@count">45</set> <!-- Default: 20 -->
+
+    <!-- Cooking Pot Mine (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='mineCookingPot']/ingredient[@name='resourceGunPowder']/@count">55</set> <!-- Default: 10 -->
+
+    <!-- Scrap Iron Plate Mine (Increase gunpowder resource req) -->
+    <set xpath="/recipes/recipe[@name='rScrapIronPlateMine']/ingredient[@name='resourceGunPowder']/@count">15</set> <!-- Default: 8 -->
+
+    <!-- No longer need 5 bones to make 1 bone knife -->
+    <set xpath="/recipes/recipe[@name='meleeToolKnifeBone']/ingredient[@name='resourceBone']/@count">1</set> <!-- Default: 5 -->
 
     <!-- Add brass to required resource to craft storage chest -->
     <append xpath="/recipes/recipe[@name='cntSecureStorageChest']">
 	    <ingredient name="resourceScrapBrass" count="2"/>
     </append>
 
-    <!-- Add brass to required resource to craft secureDoorWooden -->
-    <append xpath="/recipes/recipe[@name='secureDoorWooden']">
-	    <ingredient name="resourceScrapBrass" count="2"/>
-    </append>
+    <!-- Add nails to required resource to craft large storage box -->
+
 
     <!-- Add brass to required resource to craft secureDoorWooden -->
     <append xpath="/recipes/recipe[@name='secureDoorWooden']">
@@ -70,19 +160,22 @@
         </recipe>
     </append>
 
-    <!-- Adjust meat value in recipes (Who decided you need 5 meat to make 1 cooked meat ?) -->
-    <!-- <set xpath="/recipes/recipe[@name='meleeToolAuger']/ingredient[@name='foodRawMeat']/@count">1</set> -->
-    <set xpath="/recipes/recipe[contains(@name, 'food')]/ingredient[@name='foodRawMeat']/@count">1</set>
 
-    <!-- Remove gascan recipe - the gas issue should be fixed in a18 so no need to mess with this
-    <remove xpath="/recipes/recipe[@name='ammoGasCan']" />
-   
-    <recipe name="ammoGasCan" count="100" craft_area="chemistryStation" tags="learnable">
-	    <ingredient name="resourceOilShale" count="12"/>
-    </recipe>
+    <!-- Boiled Meat -->
+    <set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set> <!-- Default: 5 -->
 
-    <recipe name="ammoGasCan" count="600" craft_exp_gain="0" craft_time="5" always_unlocked="true">
-	    <ingredient name="oilBarrel" count="1"/>
-    </recipe>
-    -->
+    <!-- Charred Meat -->
+    <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set> <!-- Default: 5 -->
+
+    <!-- Grilled Meat -->
+    <set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set> <!-- Default: 5 -->
+
+    <!-- Bacon & Eggs -->
+    <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">3</set> <!-- Default: 5 -->
+
+    <!-- Chili Dog -->
+    <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">2</set> <!-- Default: 5 -->
+
+    <!-- Meat Stew -->
+    <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">10</set> <!-- Default: 5 -->
 </config>
