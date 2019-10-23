@@ -37,6 +37,8 @@ Features:
 				Adjusted handling of smg. (slightly better handling)</br> 
 				Reduced melee reach of zombies a bit.</br> 
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.</br>
+				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)</br>
+				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>
