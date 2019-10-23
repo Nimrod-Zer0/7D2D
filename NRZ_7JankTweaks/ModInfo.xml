@@ -4,13 +4,13 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="0.1.0" />
+		<Version value="1.1" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
 			(appdata/7DaystoDie/Saves/<worldname>/<savegamename>/Configs = is where they export to)
 
-			(10-10-2019) v0.1.0:
+			(10-10-2019) v1.0:
 				All Animal hitpoints have been adjusted.
 				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
@@ -44,6 +44,14 @@
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.
 				Adjust Hypo/Hyper thermalResist of hat skins to match the actual item.
 
+			(10-23-2019) v1.1:
+				Increased Demolisher zombie melee to 50 from 20.
+				Increased Demolisher zombie explosion damage to 7500 from 5000.
+				Increased Demolisher zombie block explosion radius to 7 from 5.
+				Increased Demolisher zombie entity explosion radius to 8 from 6.
+				Increased Cop zombie acid damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
+				xml cleanup (commented off or un-used code)
+
 
 			Features:
 				All Animal hitpoints have been adjusted.
@@ -71,6 +79,8 @@
 				Adjusted handling of smg. (slightly better handling) 
 				Reduced melee reach of zombies a bit. 
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.
+				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)
+				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
 		-->
 		<Website value="" />
 	</ModInfo>
