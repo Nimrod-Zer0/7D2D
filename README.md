@@ -12,7 +12,7 @@ Description:
 
 Features:
 </br>
-	All Animal hitpoints have been adjusted.
+	All Animal hitpoints have been adjusted.</br>
 				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)</br>
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)</br>
 				Increased zombie loot drop chance to 5% from 2%.</br>
