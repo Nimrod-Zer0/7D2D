@@ -2,9 +2,6 @@
     <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\loot.xml']" />
 
-    <!-- Decreased chance for mining helmet spawn in cars -->
-    <!-- <set xpath="/lootcontainers/lootcontainer[@id='19']/item[@name='armorMiningHelmet']/@prob">0.015</set> -->  <!--Default  0.035-->
-
     <!-- gas pump loot -->
     <set xpath="/lootcontainers/lootcontainer[@id='64']/item[@name='ammoGasCan']/@count">0,350</set> <!-- Default: 500,1500 -->
 

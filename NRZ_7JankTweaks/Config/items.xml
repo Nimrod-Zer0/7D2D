@@ -2,23 +2,22 @@
 	<!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
 	<remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\items.xml']" />
 
-	<!-- Lower chance of food poisening for yucca fruit -->
-	<!-- <set xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/display_value[@name='dFoodPoisoningRisk']/@value">0.03</set> -->	<!-- Default: .07 -->
-
-	<!-- Lower chance of food poisening for potato -->
-	<!-- <set xpath="/items/item[@name='foodCropPotato']/effect_group/display_value[@name='dFoodPoisoningRisk']/@value">0.05</set> -->	<!-- Default: 0.4 -->
-
-	<!-- Lower chance of food poisening for corn -->
-	<!-- <set xpath="/items/item[@name='foodCropCorn']/effect_group/display_value[@name='dFoodPoisoningRisk']/@value">0.05</set> -->	<!-- Default: 0.1 -->
-
 	<!-- Decrease the range a zombie can reach a bit -->
 	<insertAfter xpath="/items/item[contains(@name, 'meleeHandZombie')]/property[@class='Action0']" >
 		<property name="Range" value="1.35"/>  <!-- Default: 1.65 == This not what "clientside melee combat" means. =) This is the adjustment afterwards due to code changes. -->
   	</insertAfter>
 
-	<!-- Increase zombie cop vomit damage (an extra 25%) -->
-	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/effect_group/passive_effect[@name='DamageModifier' and @tags='stone']/@value">0.75</set>
-	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']/@value">1.5</set>
+
+	<!-- Increase Demolition zombie melee damage -->
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageEntity']/@value">50</set>	<!-- Default: 20 -->
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageBlock']/@value">500</set>	<!-- Default: 500 -->
+
+	<!-- Increase Cop vomit damage a bit -->
+	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/property[@class='Action1']/property[@name='DamageEntity']/@value">40</set>	<!-- Default: 10 -->
+	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/property[@class='Action1']/property[@name='DamageBlock']/@value">150</set>	<!-- Default: 120 -->
+	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/property[@class='Action1']/property[@name='Velocity']/@value">20</set>		<!-- Default: 18 -->
+	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/effect_group/passive_effect[@name='DamageModifier' and @tags='stone']/@value">1.5</set>	<!-- Default: 0.5 -->
+	<set xpath="/items/item[contains(@name, 'ammoProjectileZombieVomit')]/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']/@value">4.0</set>	<!-- Default: 1.2 -->
 
 
 	<!-- maybe add some randomization to the handling (like in 1st version of a18 exp) -->
@@ -39,10 +38,6 @@
 	<!-- Modify SMG EntityDamage based on Quality Level and adjust weapon handling (ak had the least recoil and weapon handling in game)-->
 	<set xpath="/items/item[@name='gunSMG5']/effect_group[@name='gunSMG5']/passive_effect[@name='WeaponHandling']/@value">0.4</set>  <!-- Default: 0.8 -->
 	
-	<!-- Modify Hunting Rifle damage based on quality and Lowered Aiming Multiplier -->
-	<!-- <set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']/@value">.35,1.35</set> -->
-	<!-- <set xpath="/items/item[@name='gunHuntingRifle']/effect_group[@name='Base Effects']/passive_effect[@name='SpreadMultiplierAiming']/@value">0.065</set> -->  <!-- Default: 0.048 -->
-
 	<!-- Modify MR10 Sniper Rifle damage based on quality, Ammo Capacity, spread multiplier -->
 	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='gunMR10']/passive_effect[@name='MagazineSize']/@value">10</set>
 	
@@ -54,7 +49,6 @@
 		the effects group is treated as completely seperate and will not add the parents effects to childs effect group.	
 	-->
 	<!-- Scrap armor -->
-	<!--<append xpath="/items/item[@name='armorScrapMaster']">-->
 	<append xpath="/items/item[@name='armorScrapHelmet']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_subtract" value="3"/>
@@ -91,7 +85,6 @@
 	</append>
 
 	<!-- Iron armor -->
-	<!--<append xpath="/items/item[@name='armorIronMaster']">-->
 	<append xpath="/items/item[@name='armorIronHelmet']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_subtract" value="5"/>
@@ -128,7 +121,6 @@
 	</append>
 	
 	<!-- Steel armor -->
-	<!--<append xpath="/items/item[@name='armorSteelMaster']">-->
 	<append xpath="/items/item[@name='armorSteelHelmet']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_subtract" value="5"/>
@@ -228,10 +220,7 @@
 
 	<!-- 	Hazmat Suit 	-->
 	<remove xpath="/items/item[contains(@name, 'apparelHazmat')]/effect_group/passive_effect[contains(@name, 'thermalResist')]" />
-	<!-- 
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-	-->
+	
 	<append xpath="/items/item[@name='apparelHazmatBoots']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="2.0,5.0"/>
@@ -239,10 +228,6 @@
 		</effect_group>
 	</append>
 
-	<!--
-		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-	-->
 	<append xpath="/items/item[@name='apparelHazmatPants']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="2.0,6.0"/>
@@ -250,10 +235,6 @@
 		</effect_group>
 	</append>
 
-	<!--
-		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-	-->
 	<append xpath="/items/item[@name='apparelHazmatJacket']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="2.0,6.0"/>
@@ -261,10 +242,6 @@
 		</effect_group>
 	</append>
 
-	<!--
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-	-->
 	<append xpath="/items/item[@name='apparelHazmatGloves']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="2.0,5.0"/>
@@ -272,10 +249,6 @@
 		</effect_group>
 	</append>
 
-	<!--
-		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
-	-->
 	<append xpath="/items/item[@name='apparelHazmatMask']">
 		<effect_group tiered="false">
 			<passive_effect name="HypothermalResist" operation="base_add" value="2.0,5.0"/>
@@ -284,10 +257,6 @@
 	</append>
 
 <!--   ============================================================================================================================   -->	
-	<!-- Poncho 
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="10.5,14.3"/>
-	-->
 	<remove xpath="/items/item[@name='apparelCoatLeatherPoncho']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='apparelCoatLeatherPoncho']/effect_group/passive_effect[@name='HyperthermalResist']" />
 	<append xpath="/items/item[@name='apparelCoatLeatherPoncho']">
@@ -297,10 +266,6 @@
 		</effect_group>
 	</append>
 
-	<!--	Duster	
-		<passive_effect name="HypothermalResist" operation="base_add" value="13.5,17.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="17.5,22.5"/>
-	-->
 	<remove xpath="/items/item[@name='apparelCoatLeatherDuster']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='apparelCoatLeatherDuster']/effect_group/passive_effect[@name='HyperthermalResist']" />
 	<append xpath="/items/item[@name='apparelCoatLeatherDuster']">
@@ -310,10 +275,6 @@
 		</effect_group>
 	</append>
 
-	<!--	Puffer Coat		
-		<passive_effect name="HypothermalResist" operation="base_add" value="21.5,26.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
 	<remove xpath="/items/item[@name='apparelCoatPufferCoat']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='apparelCoatPufferCoat']/effect_group/passive_effect[@name='HyperthermalResist']" />
 	<append xpath="/items/item[@name='apparelCoatPufferCoat']">
@@ -323,10 +284,6 @@
 		</effect_group>
 	</append>
 
-	<!-- 	Jackets 	
-		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
 	<remove xpath="/items/item[@name='apparelCoatJacketGeneric']/effect_group/passive_effect[@name='HypothermalResist']" />
 	<remove xpath="/items/item[@name='apparelCoatJacketGeneric']/effect_group/passive_effect[@name='HyperthermalResist']" />
 	<append xpath="/items/item[@name='apparelCoatJacketGeneric']">
@@ -531,55 +488,6 @@
 		</effect_group>
 	</append>
 
-	<!-- 	apparelGasMask    
-		none - should ad a bit of heat
-	-->
-	<!-- 	apparelBandana    
-		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
-
-
-
-	<!--  Boots  -->
-	<!--  apparelWornBoots  
-		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
-	<!--  apparelRunningShoesRegular  
-		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
-	<!--  apparelRunningShoesHP  
-		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	-->
-	<!--  apparelCowboyBoots  
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
-	-->
-	<!--  apparelGothBoots  
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
-	-->
-	  
-
 	<!--	First Aid Kit	-->
 	<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>		<!-- Default: 5 -->
-
-	<!--	Add chance of food poison to canned items (simulate canned goods that have expired) 
-	==================================================================================================
-	sadly this doesnt appear possible the way devs have setup the system as it only reads a singular set value.
-	if the devs ever enter a getter function to retrieve a random value then this could be easily done.
-	
-	<append xpath="/items/item[contains(@name, 'foodCan')]">
-		<effect_group tiered="false">
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="0"/><display_value name="dFoodPoisoningRisk" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
-				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-			</triggered_effect>
-		</effect_group>
-	</append>
-	-->
 </config>

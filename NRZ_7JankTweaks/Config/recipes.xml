@@ -27,27 +27,6 @@
     <remove xpath="/recipes/recipe[@name='ammoRocketFrag']" />
     <remove xpath="/recipes/recipe[@name='ammoRocketHE']" />
 
-
-    <!-- Make gun require more specific weapon parts in order to craft -->
-<!--
-    <set xpath="/recipes/recipe[@name='gun44Magnum']/ingredient[@name='gunPistolParts']/@count">15</set>                            
-    <set xpath="/recipes/recipe[@name='gunAK47']/ingredient[@name='gunAk47Parts']/@count">25</set>                                  
-    <set xpath="/recipes/recipe[@name='gunM60']/ingredient[@name='gunAk47Parts']/@count">30</set>                                   
-    <set xpath="/recipes/recipe[@name='gunJunkTurret']/ingredient[@name='gunJunkTurretParts']/@count">65</set>                      
-    <set xpath="/recipes/recipe[@name='gunBowCompound']/ingredient[@name='gunBowWoodenParts']/@count">25</set>                      
-    <set xpath="/recipes/recipe[@name='gunCrossbowCompound']/ingredient[@name='gunBowWoodenParts']/@count">25</set>                 
-    <set xpath="/recipes/recipe[@name='gunHuntingRifle']/ingredient[@name='gunHuntingRifleParts']/@count">15</set>                  
-    <set xpath="/recipes/recipe[@name='gunMR10']/ingredient[@name='gunHuntingRifleParts']/@count">25</set>                          
-    <set xpath="/recipes/recipe[@name='gunPistol']/ingredient[@name='gunPistolParts']/@count">15</set>                              
-    <set xpath="/recipes/recipe[@name='gunDoubleBarrelShotgun']/ingredient[@name='gunDoubleBarrelShotgunParts']/@count">10</set>    
-    <set xpath="/recipes/recipe[@name='gunPumpShotgun']/ingredient[@name='gunDoubleBarrelShotgunParts']/@count">15</set>            
-    <set xpath="/recipes/recipe[@name='gunRocketLauncher']/ingredient[@name='gunRocketLauncherParts']/@count">35</set>              
-    <set xpath="/recipes/recipe[@name='gunSMG5']/ingredient[@name='gunPistolParts']/@count">25</set>                                
--->
-    <!-- Make guns require more overall parts to craft -->
-    <!-- <set xpath="/recipes/recipe[contains(@name, 'gun')]/effect_group/passive_effect[@name='CraftingIngredientCount']/@value">0,5</set> -->     <!-- Default: 0,5 -->
-
-
     <!-- Remove military clothes from workbench so perfect quality military clothes cant be crafted -->
     <remove xpath="/recipes/recipe[@name='armorMilitaryBoots']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryGloves']" />
@@ -76,7 +55,7 @@
     <!-- Molotov Cocktail (Decrease ammoGasCan resource req) -->
     <set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']/ingredient[@name='ammoGasCan']/@count">25</set> <!-- Default: 300 -->
 
-    <!-- 
+<!-- 
         PipeBomb (Increase gunpowder resource req) 
     =================================================
     this was suppose to be incresed to 25 but because grenades cant be altered for some reason this is staying default for now.    

@@ -9,81 +9,22 @@
     <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='upAngleMax']/@value">75</set>			<!-- Default: 90 -->
     <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='steerRate']/@value">200</set>
     <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='steerCenteringRate']/@value">140</set>
-	<!-- <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='upForce']/@value">1</set> -->			<!-- Default: 1 -->
-    <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='unstickForce']/@value">5</set>			<!-- Default: 1 -->
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='unstickForce']/@value">5</set>			<!-- Default: 1 -->
     <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">13,20</set>
-
     <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='headlight']/property[@name='bright']/@value">1.1</set>
 
-    <!--
-		Default Stats:
-        <vehicle name="vehicle4x4Truck">
-
-		<property name="cameraDistance" value="5.5, 7"/>
-		<property name="cameraTurnRate" value=".2, .35"/>
-		<property name="motorTorqueMinQ" value="4000"/>
-		<property name="motorTorqueMaxQ" value="6000"/>
-		<property name="brakeTorque" value="5000"/>
-		<property name="upAngleMax" value="70"/>
-		<property name="upForce" value="1"/>
-		<property name="steerRate" value="130"/>
-		<property name="steerCenteringRate" value="90"/>
-		<property name="tiltAngleMax" value="80"/>
-		<property name="tiltThreshold" value="3"/>
-		<property name="tiltDampening" value=".22"/>
-		<property name="tiltDampenThreshold" value="8"/>
-		<property name="tiltUpForce" value="0"/>
-		<property name="unstickForce" value="1"/>
-		<property name="velocityMax" value="9, 13"/>
-		<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
-		<property name="wheelPtlScale" value="1"/>
-    -->
-
-    <!-- Moped 
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='motorTorqueMinQ']/@value">3500</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='motorTorqueMaxQ']/@value">7500</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='brakeTorque']/@value">7500</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='upAngleMax']/@value">90</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='steerRate']/@value">200</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='steerCenteringRate']/@value">140</set>
-    <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='unstickForce']/@value">5</set>
-	-->
+    <!-- Moped -->
     <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='upAngleMax']/@value">50</set>	<!-- Default: 70 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='unstickForce']/@value">3</set>	<!-- Default: 1 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8,12</set>	<!-- Default: 7, 10 -->
-
     <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='headlight']/property[@name='bright']/@value">0.65</set>
 
-    <!--
-        <vehicle name="vehicleMinibike">
-
-		<property name="cameraDistance" value="3, 4.5"/>
-		<property name="cameraTurnRate" value=".2, .35"/>
-		<property name="motorTorqueMinQ" value="1000"/>
-		<property name="motorTorqueMaxQ" value="2000"/>
-		<property name="brakeTorque" value="4000"/>
-		<property name="upAngleMax" value="70"/>
-		<property name="upForce" value="1"/>
-		<property name="steerRate" value="130"/>
-		<property name="steerCenteringRate" value="90"/>
-		<property name="tiltAngleMax" value="20"/>
-		<property name="tiltThreshold" value="3"/>
-		<property name="tiltDampening" value=".22"/>
-		<property name="tiltDampenThreshold" value="8"/>
-		<property name="tiltUpForce" value="5"/>
-		<property name="hopForce" value="1.5, .2"/>
-		<property name="unstickForce" value="1"/>
-		<property name="velocityMax" value="7, 10"/>
-		<property name="waterDrag_y_velScale_velMaxScale" value="1.5, .9, .15"/>
-		<property name="wheelPtlScale" value=".6"/>
-    -->
     <!-- Motorcycle -->
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='motorTorqueMinQ']/@value">2500</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='motorTorqueMaxQ']/@value">4500</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='brakeTorque']/@value">2500</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='upAngleMax']/@value">75</set>  <!-- 80 -->
-	<!-- <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='upForce']/@value">1</set> -->
-    <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerRate']/@value">150</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerRate']/@value">150</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerCenteringRate']/@value">100</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltAngleMax']/@value">30</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltThreshold']/@value">0.01</set>
@@ -91,57 +32,10 @@
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltDampenThreshold']/@value">20</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='unstickForce']/@value">5</set>
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">15,22</set>
-
     <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='headlight']/property[@name='bright']/@value">1.0</set>
 
-    <!--
-        <vehicle name="vehicleMotorcycle">
-
-		<property name="cameraDistance" value="3.5, 5"/>
-		<property name="cameraTurnRate" value=".2, .35"/>
-		<property name="motorTorqueMinQ" value="2000"/>
-		<property name="motorTorqueMaxQ" value="3000"/>
-		<property name="brakeTorque" value="4000"/>
-		<property name="upAngleMax" value="70"/>
-		<property name="upForce" value="1"/>
-		<property name="steerRate" value="130"/>
-		<property name="steerCenteringRate" value="90"/>
-		<property name="tiltAngleMax" value="20"/>
-		<property name="tiltThreshold" value="3"/>
-		<property name="tiltDampening" value=".22"/>
-		<property name="tiltDampenThreshold" value="8"/>
-		<property name="tiltUpForce" value="5"/>
-		<property name="hopForce" value="1, .8"/>
-		<property name="unstickForce" value="1"/>
-		<property name="velocityMax" value="9, 14"/>
-		<property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .1"/>
-		<property name="wheelPtlScale" value="1"/>
-    -->    
-
-	<!-- Bike -->
-	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='upAngleMax']/@value">65</set>	<!-- Default: 70 -->
+    <!-- Bike -->
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='upAngleMax']/@value">65</set>		<!-- Default: 70 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='hopForce']/@value">4, .05</set>	<!-- Default: 4, .05 -->
 	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">5.5,8</set>	<!-- Default: 5, 10 -->
-<!--
-	<property name="cameraDistance" value="3, 4.5"/>
-		<property name="cameraTurnRate" value=".2, .35"/>
-		<property name="motorTorqueMinQ" value="1000"/>
-		<property name="motorTorqueMaxQ" value="1000"/>
-		<property name="brakeTorque" value="4000"/>
-		<property name="upAngleMax" value="70"/>
-		<property name="upForce" value="1"/>
-		<property name="steerAngleMax" value="28"/>
-		<property name="steerRate" value="130"/>
-		<property name="steerCenteringRate" value="90"/>
-		<property name="tiltAngleMax" value="20"/>
-		<property name="tiltThreshold" value="3"/>
-		<property name="tiltDampening" value=".22"/>
-		<property name="tiltDampenThreshold" value="8"/>
-		<property name="tiltUpForce" value="5"/>
-		<property name="hopForce" value="4, .05"/>
-		<property name="unstickForce" value=".2"/>
-		<property name="velocityMax" value="5, 10"/>
-		<property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .2"/>
-		<property name="wheelPtlScale" value=".6"/>
--->
 </config>

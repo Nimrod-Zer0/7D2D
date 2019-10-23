@@ -4,39 +4,31 @@
 
     <!-- Reduce Snake health -->
     <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">10</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@operation='base_set']/@value">10</set> -->  <!-- Default: 10 -->
-
+    
     <!-- Reduce Wolf health (MountainLion inherates from this) -->
     <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@operation='base_set']/@value">90</set> -->   <!-- Default: 140 -->
-
+    
     <!-- Reduce DireWolf health -->
     <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">175</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@operation='base_set']/@value">175</set> -->  <!-- Default: 250 -->
     
     <!-- Reduce zombie twirly dog health -->
     <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">75</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@operation='base_set']/@value">75</set> -->  <!-- Default: 100 -->
     
     <!-- Reduce zombie vulture health health -->
     <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">25</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@operation='base_set']/@value">25</set> -->  <!-- Default: 30 -->
-
+    
     <!-- Reduce zombie vulture (Rad) health -->
     <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">55</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@operation='base_set']/@value">55</set> -->  <!-- Default: 120 -->
-
+    
     <!-- Increase Stag health -->
     <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>  <!-- 125 -->
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@operation='base_set']/@value">125</set> -->   <!-- Default: 100 -->
-
+    
     <!-- Increase Doe health -->
     <set xpath="/entity_classes/entity_class[@name='animalDoe']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">85</set> <!-- 100 Default: 50 -->
 
     <!-- Reduce Coyote health -->
     <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">50</set>
-    <!-- <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@operation='base_set']/@value">50</set> -->   <!-- Default: 80 -->
-
+    
 
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Immunity']/@value">sickness;disease;wellness;bleeding</set>
@@ -48,9 +40,33 @@
     <set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">0.045,2.5</set>   <!-- Default: 0.045,0.045 -->
     <set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">0.5,2.0</set>     <!-- Default: 0.5,1.8 -->
 
-    <!-- Make corpse stick around a bit longer -->
-    <!-- <set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath']/@value">60</set>  -->  <!-- Default: 30 -->
-        
+    
+    <!-- Make Demolisher a litle bit more dangerous -->  
+    <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.RadiusBlocks']/@value">7</set>         <!-- Default: 5 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.RadiusEntities']/@value">8</set>       <!-- Default: 6 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">7500</set>       <!-- Default: 5000 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.EntityDamage']/@value">1000</set>      <!-- Default: 800 -->
+
+    <!-- Make Cop a litle bit more dangerous (default cop does damage of radiated) -->  
+    <set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Explosion.RadiusBlocks']/@value">5</set>             <!-- Default: 5 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Explosion.RadiusEntities']/@value">6</set>           <!-- Default: 6 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Explosion.BlockDamage']/@value">750</set>            <!-- Default: 500 -->
+    <set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Explosion.EntityDamage']/@value">250</set>           <!-- Default: 150 -->
+    
+    <append xpath="/entity_classes/entity_class[@name='zombieFatCop']">
+        <property name="Explosion.DamageBonus.wood" value="0.5" />
+        <property name="Explosion.DamageBonus.stone" value="1.5" />
+        <property name="Explosion.DamageBonus.metal" value="4.0" />
+	</append>
+    
+    <!--
+        <property name="Explosion.DamageBonus.stone" value=".1"/>
+		<property name="Explosion.DamageBonus.metal" value=".05"/>
+		<property name="Explosion.DamageBonus.earth" value="0"/>
+		<property name="Explosion.DamageBonus.wood" value=".5"/>
+		<property name="Explosion.DamageBonus.water" value="0"/>
+    -->    
+
     <!-- 
         Adjust Meat Harvest of animals (for changes to meat in recipes) 
     =======================================================================
@@ -73,43 +89,3 @@
     <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">1</set>
     <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']/@count">3</set>
 </config>
-
-<!--
-r=foodRottingFlesh
-animalStag 30
-animalDoe 20
-animalRabbit 10
-animalChicken 10
-animalBear 50
-animalZombieBear 7 
-animalWolf 25
-animalDireWolf 35
-animalZombieVulture r 3
-animalZombieDog r 4
-animalSnake 10
-animalBoar 30
-animalBossGrace 100
--->    
-
-<!--
-    Radiated zombies
-<entity_class name="zombieWightRadiated" extends="zombieWightFeral">
-<entity_class name="zombieBoeRadiated" extends="zombieBoeFeral">
-<entity_class name="zombieFemaleFatRadiated" extends="zombieFemaleFatFeral">
-<entity_class name="zombieJoeRadiated" extends="zombieJoeFeral">
-<entity_class name="zombieMoeRadiated" extends="zombieMoeFeral">
-<entity_class name="zombieArleneRadiated" extends="zombieArleneFeral">
-<entity_class name="zombieLabRadiated" extends="zombieLab">
-<entity_class name="zombieScreamerRadiated" extends="zombieScreamerFeral">
-<entity_class name="zombieDarleneRadiated" extends="zombieDarleneFeral">
-<entity_class name="zombieMarleneRadiated" extends="zombieMarlene">
-<entity_class name="zombieYoRadiated" extends="zombieYoFeral">
-<entity_class name="zombieSteveRadiated" extends="zombieSteveFeral">
-<entity_class name="zombieSpiderRadiated" extends="zombieSpiderFeral">
-<entity_class name="zombieFatCopRadiated" extends="zombieFatCopFeral">
-<entity_class name="zombieSoldierRadiated" extends="zombieSoldierFeral">
-<entity_class name="zombieSkateboarderRadiated" extends="zombieSkateboarderFeral">
-<entity_class name="zombieCheerleaderRadiated" extends="zombieCheerleaderFeral">
-<entity_class name="zombieOldTimerRadiated" extends="zombieOldTimerFeral">
-<entity_class name="zombieBikerRadiated" extends="zombieBikerFeral">
--->

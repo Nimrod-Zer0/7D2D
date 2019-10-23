@@ -15,25 +15,6 @@
     <set xpath="/item_modifiers/item_modifier[@name='modGunForegrip']/effect_group/passive_effect[@name='KickDegreesHorizontalMin']/@value">0.25</set> <!-- Default: 0.5 -->
     <set xpath="/item_modifiers/item_modifier[@name='modGunForegrip']/effect_group/passive_effect[@name='KickDegreesHorizontalMax']/@value">0.25</set> <!-- Default: 0.5 -->
 
-    <!-- 
-        I dont understand the point of hat skin mods. it completely changes the stats of current hat/helmet to whatever mod you install.
-        why ?  - just put on the other helmet !
-    -->
-    <!--  Remove Hypo/Hyper thermalResist of hat skins (skins should NOT change the stats of current helmet) -->
-    <!--
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorCowboyHat']/effect_group/passive_effect[@name='HypothermalResist']" />
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorCowboyHat']/effect_group/passive_effect[@name='HyperthermalResist']" />
-
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorSkullCap']/effect_group/passive_effect[@name='HypothermalResist']" />
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorSkullCap']/effect_group/passive_effect[@name='HyperthermalResist']" />
-
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorPressboyCap']/effect_group/passive_effect[@name='HypothermalResist']" />
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorPressboyCap']/effect_group/passive_effect[@name='HyperthermalResist']" />
-
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorBallCap']/effect_group/passive_effect[@name='HypothermalResist']" />
-    <remove xpath="/item_modifiers/item_modifier[@name='modArmorBallCap']/effect_group/passive_effect[@name='HyperthermalResist']" />
-    -->
-
     <!--  Adjust Hypo/Hyper thermalResist of hat skins (to match the actual item changes) -->
     <set xpath="/item_modifiers/item_modifier[@name='modArmorCowboyHat']/effect_group/passive_effect[@name='HypothermalResist']/@value">2</set> <!-- Default: 2.8,5.2 -->
     <set xpath="/item_modifiers/item_modifier[@name='modArmorCowboyHat']/effect_group/passive_effect[@name='HyperthermalResist']/@value">8</set> <!-- Default: 10.5,14.3 -->
