@@ -19,3 +19,9 @@ Game stages are stupid.
 Add chance of food poison to canned items (simulate canned goods that have expired). 
 	sadly this doesnt appear possible the way devs have setup the system as it only reads a singular set value.
 	if the devs ever enter a getter function to retrieve a random value then this could be easily done.
+
+Lock picks 
+    lock picks should also work on locked doors. (currently they only work on safes)
+
+Remove sneak damage
+    crouching down 2 inches should NOT make any weapon somehow do at least 2X more damage. 
