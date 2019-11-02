@@ -36,4 +36,14 @@
 
 	<set xpath="/blocks/block[@name='cntBusSchool']/drop[@name='ammoGasCan' and @tag='allHarvest']/@count">0,75</set>			<!-- Default: 100,1000 -->
 	<set xpath="/blocks/block[@name='cntBusSchool']/drop[@name='ammoGasCan' and @tag='salvageHarvest']/@count">0,75</set>		<!-- Default: 100,1000 -->
+
+
+	<!-- Wall safe lock picking -->
+	<set xpath="/blocks/block[@name='cntWallSafe']/property[@name='LockPickTime']/@value">25</set>				<!-- Default: 15 -->
+	<set xpath="/blocks/block[@name='cntWallSafe']/property[@name='LockPickBreakChance']/@value">0.75</set>		<!-- Default: 0.65 -->
+
+	<!-- Gun safe lock picking -->
+	<set xpath="/blocks/block[@name='cntGunSafe']/property[@name='LockPickTime']/@value">45</set>				<!-- Default: 15 -->
+	<set xpath="/blocks/block[@name='cntGunSafe']/property[@name='LockPickBreakChance']/@value">0.85</set>		<!-- Default: 0.65 -->
+	<set xpath="/blocks/block[@name='cntGunSafe']/property[@name='MaxDamage']/@value">10000</set>				<!-- Default: 5000 -->
 </configs>
