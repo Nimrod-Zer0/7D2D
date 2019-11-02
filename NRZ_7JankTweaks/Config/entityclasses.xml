@@ -29,7 +29,7 @@
     <!-- Reduce Coyote health -->
     <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">50</set>
     
-
+    
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Immunity']/@value">sickness;disease;wellness;bleeding</set>
 
@@ -66,6 +66,11 @@
 		<property name="Explosion.DamageBonus.wood" value=".5"/>
 		<property name="Explosion.DamageBonus.water" value="0"/>
     -->    
+
+    <!--  Set new hand type for bigger zombies  (more entity and block damage)  -->
+    <set xpath="/entity_classes/entity_class[contains(@name, 'zombieBiker')]/property[@name='HandItem']/@value">meleeHandZombieBigJank</set>   <!-- Default: meleeHandZombieStrong -->
+    <set xpath="/entity_classes/entity_class[contains(@name, 'zombieSnow')]/property[@name='HandItem']/@value">meleeHandZombieBigJank</set>    <!-- Default: meleeHandZombieStrong -->
+    <set xpath="/entity_classes/entity_class[contains(@name, 'zombieWight')]/property[@name='HandItem']/@value">meleeHandZombieBigJank</set>   <!-- Default: meleeHandZombieCop -->
 
     <!-- 
         Adjust Meat Harvest of animals (for changes to meat in recipes) 
