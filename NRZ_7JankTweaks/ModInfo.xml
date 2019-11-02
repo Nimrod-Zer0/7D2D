@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.1" />
+		<Version value="1.2" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -51,6 +51,16 @@
 				Increased Demolisher zombie entity explosion radius to 8 from 6.
 				Increased Cop zombie acid damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
 				xml cleanup (commented off or un-used code)
+
+			(10-25-2019) v1.2:
+				Increased wall safes lockpick times. (default: 15 changed to 25)
+				Increased lockpick break chance on wall safes. (default: 0.65 to 0.75)
+				Increased gun safes lockpick times. (default: 15 changed to 45)
+				Increased lockpick break chance on gun safes. (default: 0.65 changed to 0.85)
+				Added new zombie melee hand type - meleeHandZombieBigJank (damage: Entity 50, Block 250)
+				Biker, Snow and wights now hit harder with new melee hand class (meleeHandZombieBigJank)
+				Added missing terrain blocks to crafting menu. (terrForestGround,terrBurntForestGround,terrDesertGround,terrSand,terrSandStone,terrSnow,terrIce,terrAsphalt)
+				Increased damage of spears on cloth panels. (can now destroy cloth panels in 1 hit)
 
 
 			Features:
