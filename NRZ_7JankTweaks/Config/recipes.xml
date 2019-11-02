@@ -157,4 +157,57 @@
 
     <!-- Meat Stew -->
     <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">10</set> <!-- Default: 5 -->
+
+
+    <!--  Add missing terrain blocks  -->
+    <append xpath="/recipes">
+        <recipe name="terrForestGround" count="1">
+	        <ingredient name="resourceClayLump" count="25"/>
+	        <ingredient name="resourceRockSmall" count="10"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrBurntForestGround" count="1">
+	        <ingredient name="resourceClayLump" count="25"/>
+	        <ingredient name="resourceCoal" count="10"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrDesertGround" count="1">
+            <ingredient name="resourceCrushedSand" count="15"/>
+	        <ingredient name="resourceCobblestones" count="5"/>
+            <ingredient name="resourceClayLump" count="2"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrSand" count="1">
+	        <ingredient name="resourceCrushedSand" count="15"/>
+            <ingredient name="resourceClayLump" count="2"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrSandStone" count="1">
+	        <ingredient name="resourceCrushedSand" count="20"/>
+	        <ingredient name="resourceCobblestones" count="10"/>
+            <ingredient name="resourceClayLump" count="4"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrSnow" count="1">
+	        <ingredient name="resourceSnowBall" count="11"/>
+        </recipe>
+    </append>
+
+    <append xpath="/recipes">
+        <recipe name="terrAsphalt" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
+	        <ingredient name="resourceCrushedSand" count="10"/>
+	        <ingredient name="resourceRockSmall" count="30"/>
+            <ingredient name="resourceBrokenGlass" count="5"/>
+        </recipe>
+    </append>
 </config>
