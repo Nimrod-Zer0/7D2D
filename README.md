@@ -38,11 +38,10 @@ Features:
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.</br>
 				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)</br>
 				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)</br></br>
-
-				NOTE:
+				NOTE:</br>
 					This mod is all about small changes weather it be for quality of life or small balance adjustments, it does not remove any major features of the game.</br>
 					This mod is meant to be modular and at minimum an example of how to use xpath for modding.</br> 
-					Not everyone is going to like every change so simply remove the change or adjust it to your likeing if you want to.</br> 
+					Not everyone is going to like every change so simply remove the change or adjust it to your likeing if you want to.</br>
 					If you do make your own changes please do not say that mod is broken or doesnt work as these are now your errors or issues not mine.</br> 
 					If you do experiance any issues after you have modifyied it you can always redownload the mod in its original for as it has no issues, conflicts or errors.
 	</br></br>
