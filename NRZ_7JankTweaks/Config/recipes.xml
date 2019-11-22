@@ -3,10 +3,13 @@
     <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\recipes.xml']" />
 
     <!--
-        In a game where you should be out looting i find it very stupid you can unlock a skill or read a book that allows crafting any weapon or tool at max tier.
+        In a game where you should be out looting i find it very stupid you can unlock a skill or read a book that allows crafting any weapon or tool up to max tier.
+        however, after a recent debate with a good friend he pointed out that this is the 1 thing in the mod that removes a game feature (crafting tools and weapons).
+        therefor i am leaving the code in here but commenting it off so its not active. if you wish to use it simply unblock it.
     -->
 
-    <!-- Remove guns from workbench so perfect qualiy weapons cant be crafted (or any quality for that matter) -->
+    <!-- Remove guns from workbench so perfect quality weapons cant be crafted (or any quality for that matter) -->
+    <!--
     <remove xpath="/recipes/recipe[@name='gun44Magnum']" />
     <remove xpath="/recipes/recipe[@name='gunAK47']" />
     <remove xpath="/recipes/recipe[@name='gunBlunderbuss']" />
@@ -26,15 +29,19 @@
     <remove xpath="/recipes/recipe[@name='thrownGrenadeContact']" />
     <remove xpath="/recipes/recipe[@name='ammoRocketFrag']" />
     <remove xpath="/recipes/recipe[@name='ammoRocketHE']" />
+    -->
 
     <!-- Remove military clothes from workbench so perfect quality military clothes cant be crafted -->
+    <!--
     <remove xpath="/recipes/recipe[@name='armorMilitaryBoots']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryGloves']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryHelmet']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryLegs']" />
     <remove xpath="/recipes/recipe[@name='armorMilitaryVest']" />
-    
+    -->
+
     <!-- Remove Tools from workbench so perfect quality tools cant be crafted -->
+    <!--
     <remove xpath="/recipes/recipe[@name='meleeToolAuger']" />
     <remove xpath="/recipes/recipe[@name='meleeToolChainsaw']" />
     <remove xpath="/recipes/recipe[@name='meleeToolClawHammer']" />
@@ -49,7 +56,7 @@
     <remove xpath="/recipes/recipe[@name='meleeToolSledgehammerIron']" />
     <remove xpath="/recipes/recipe[@name='meleeToolSledgehammerSteel']" />
     <remove xpath="/recipes/recipe[@name='meleeToolWrench']" />
-
+    -->
 
 
     <!-- Molotov Cocktail (Decrease ammoGasCan resource req) -->
