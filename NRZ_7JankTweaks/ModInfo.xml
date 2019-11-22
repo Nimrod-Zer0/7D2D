@@ -62,7 +62,7 @@
 				Added missing terrain blocks to crafting menu. (terrForestGround,terrBurntForestGround,terrDesertGround,terrSand,terrSandStone,terrSnow,terrIce,terrAsphalt)
 				Increased damage of spears on cloth panels. (can now destroy cloth panels in 1 hit)
 
-			(10-25-2019) v1.2.1:
+			(11-22-2019) v1.2.1:
 				Removed code that prevented crafting of weapons and tools. 
 				
 					Reasoning - In a game where you should be out looting i find it very stupid you can unlock a skill or read a book that allows crafting any weapon or tool up to max tier.
