@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.2" />
+		<Version value="1.2.1" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -62,6 +62,16 @@
 				Added missing terrain blocks to crafting menu. (terrForestGround,terrBurntForestGround,terrDesertGround,terrSand,terrSandStone,terrSnow,terrIce,terrAsphalt)
 				Increased damage of spears on cloth panels. (can now destroy cloth panels in 1 hit)
 
+			(10-25-2019) v1.2.1:
+				Removed code that prevented crafting of weapons and tools. 
+				
+					Reasoning - In a game where you should be out looting i find it very stupid you can unlock a skill or read a book that allows crafting any weapon or tool up to max tier.
+        			however, after a recent debate with a good friend he pointed out that this is the 1 thing in the mod that removes a game feature (crafting tools and weapons).
+        			therefor i am leaving the code in here but commenting it off so its not active. if you should want to use it simply unblock it.
+
+					This mod is all about small changes weather it be for quality of life or small balance adjustments, it should not remove any major features of the game. 
+					This mod is meant to be modular and at minimum an example of how to use xpath for modding. not everyone is going to like every change so simply remove the change or adjust it to your likeing. 
+
 
 			Features:
 				All Animal hitpoints have been adjusted.
@@ -69,7 +79,6 @@
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)
 				Increased zombie loot drop chance to 5% from 2%.
 				Added Food, Water and Core Temp Bars to main hud.
-				Removed ability to craft any weapon or tools from workbench. (i feel crafting max quality weapons/tools takes away from looting in a game where you are suppose to go looting)
 				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4. 
 				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up to but hitting it will harvest and leave seed like vanilla game)
 				Traders have more item count variance. (min/max items they may have)
@@ -91,6 +100,13 @@
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.
 				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)
 				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
+
+				NOTE:
+					This mod is all about small changes weather it be for quality of life or small balance adjustments, it should not remove any major features of the game. 
+					This mod is meant to be modular and at minimum an example of how to use xpath for modding. 
+					Not everyone is going to like every change so simply remove the change or adjust it to your likeing. 
+					If you do make your own changes please do not say that mod is broken or doesnt work as these are now your errors or issues not mine. 
+					If you do experiance any issues after you have modifyied it you can always redownload the mod in its original for as it has no issues, conflicts or errors.
 		-->
 		<Website value="" />
 	</ModInfo>
