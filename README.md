@@ -17,7 +17,6 @@ Features:
 				Removed the weather survival buff given to fresh spawns. (you should know if its hot/cold from the start, not find out after you already started to build in area you started at)</br>
 				Increased zombie loot drop chance to 5% from 2%.</br>
 				Added Food, Water and Core Temp Bars to main hud.</br>
-				Removed ability to craft any weapon or tools from workbench. (i feel crafting max quality weapons/tools takes away from looting in a game where you are suppose to go looting)</br>
 				Adjusted light brightness, speed and handling of bike, minibike, motorcycle and 4x4.</br>
 				Plants/crops can be picked up by pressing E again. (Note: player crops can be picked up, but hitting it will harvest it and leave seed like vanilla game)</br>
 				Traders have more item count variance. (min/max items they may have)</br>
@@ -38,7 +37,14 @@ Features:
 				Reduced melee reach of zombies a bit.</br> 
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.</br>
 				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)</br>
-				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
+				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)</br></br>
+
+				NOTE:
+					This mod is all about small changes weather it be for quality of life or small balance adjustments, it does not remove any major features of the game.</br>
+					This mod is meant to be modular and at minimum an example of how to use xpath for modding.</br> 
+					Not everyone is going to like every change so simply remove the change or adjust it to your likeing if you want to.</br> 
+					If you do make your own changes please do not say that mod is broken or doesnt work as these are now your errors or issues not mine.</br> 
+					If you do experiance any issues after you have modifyied it you can always redownload the mod in its original for as it has no issues, conflicts or errors.
 	</br></br>
 (you can read changelog in modinfo.xml)
 </br></br>
