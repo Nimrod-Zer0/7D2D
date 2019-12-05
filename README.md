@@ -67,3 +67,4 @@ There is barely any documentation on xpath usage for 7 days to die and none of i
 If you're running a dedicated server you need only run this mod on the server and any clients will automatically recieve the updated Mod info.
 </br></br>
 I have no idea what happens when using multiple mods (using the xpath system) at the same time so i would not recommend it unless you are specifically testing compatibility and are aware that there may be issues or crashes.
+
