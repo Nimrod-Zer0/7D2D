@@ -512,6 +512,13 @@
 		</effect_group>
 	</append>
 
-	<!--	First Aid Kit	-->
+	<!--	First Aid Kit	 -->
 	<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">10</set>		<!-- Default: 5 -->
+
+	<!--	First Aid Bandage	 -->
+	<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='Stacknumber']/@value">10</set>		<!-- Default: 5 -->
+
+	<!-- Reduce chance of food poison from Cooked foods -->
+	<set xpath="/items/item[contains(@name, 'food')]/effect_group/triggered_effect[@cvar='.DiseaseRoll' and @operation='set' and @value='4']/@value">2</set>	<!-- Default: 4 -->
+	<set xpath="/items/item[contains(@name, 'food')]/effect_group/display_value[@name='dFoodPoisoningRisk' and @value='.04']/@value">.02</set>					<!-- Default: 04 -->
 </config>
