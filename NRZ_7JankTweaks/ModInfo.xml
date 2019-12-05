@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.2.1" />
+		<Version value="1.3" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -71,6 +71,11 @@
 
 					This mod is all about small changes weather it be for quality of life or small balance adjustments, it should not remove any major features of the game. 
 					This mod is meant to be modular and at minimum an example of how to use xpath for modding. not everyone is going to like every change so simply remove the change or adjust it to your likeing. 
+
+			(12-5-2019) v1.3:
+				Reduced chance of food poison from cooked food items to 2% from 4%. 
+				First aid bandage now stacks to 10 like regular bandages.
+
 
 
 			Features:
