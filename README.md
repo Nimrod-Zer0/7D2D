@@ -37,7 +37,10 @@ Features:
 				Reduced melee reach of zombies a bit.</br> 
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.</br>
 				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)</br>
-				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)</br></br>
+				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)</br>
+				Reduced shown surface resource veins (The surface model not the actuall vein).</br>
+				Reduced shown surface resource boulders.</br>
+				Adjusted biome spawns so world doesnt feel so empty.</br></br>
 				NOTE:</br>
 					This mod is all about small changes weather it be for quality of life or small balance adjustments, it does not remove any major features of the game.</br>
 					This mod is meant to be modular and at minimum an example of how to use xpath for modding.</br> 
@@ -67,4 +70,3 @@ There is barely any documentation on xpath usage for 7 days to die and none of i
 If you're running a dedicated server you need only run this mod on the server and any clients will automatically recieve the updated Mod info.
 </br></br>
 I have no idea what happens when using multiple mods (using the xpath system) at the same time so i would not recommend it unless you are specifically testing compatibility and are aware that there may be issues or crashes.
-
