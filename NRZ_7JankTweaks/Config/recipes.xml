@@ -117,13 +117,16 @@
     <!-- No longer need 5 bones to make 1 bone knife -->
     <set xpath="/recipes/recipe[@name='meleeToolKnifeBone']/ingredient[@name='resourceBone']/@count">1</set> <!-- Default: 5 -->
 
+    <!--  Gasoline  -->
+    <set xpath="/recipes/recipe[@name='ammoGasCan']/ingredient[@name='resourceOilShale']/@count">10</set> <!-- Default: 1 -->
+
+    <!--  Gasoline Bundle  -->
+    <set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='resourceOilShale']/@count">8000</set> <!-- Default: 800 -->
+    
     <!-- Add brass to required resource to craft storage chest -->
     <append xpath="/recipes/recipe[@name='cntSecureStorageChest']">
 	    <ingredient name="resourceScrapBrass" count="2"/>
     </append>
-
-    <!-- Add nails to required resource to craft large storage box -->
-
 
     <!-- Add brass to required resource to craft secureDoorWooden -->
     <append xpath="/recipes/recipe[@name='secureDoorWooden']">
