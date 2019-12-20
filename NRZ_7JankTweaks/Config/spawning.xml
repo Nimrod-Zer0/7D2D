@@ -1,0 +1,151 @@
+<config>
+    <!-- Log with a warning message that mod is loaded (warning simply shows mod path cant be removed because that path doesnt exist) -->
+    <remove xpath="/JankMod_Loaded[@modname='NRZ_7JankTweaks'][@filename='\Config\spawning.xml']" />
+
+    <!--
+        Add addl zombie spawns to some biomes so world doesnt feel so empty at times
+        ============================================================================
+        To keep this simple and not change what the devs have done or future adjustments by the devs i think its best to simply add addl spawns after the original entries.
+
+		The way spawning seems to work:
+			there seem to be spawn points roughly 100 (very rough estimate) or so  blocks away from each other. each spawner will spawn an entiy up to (max count) number.
+			after those entities are killed from that spawner it will take a set amount of days (respawn delay) before spawner resets and spawns more enemys.
+    -->
+
+    <!-- 
+        Adjust Pine Forest Biome max zombie count 
+    ================================================
+        Defaults:
+            <spawn maxcount="1" respawndelay="3" time="Day" entitygroup="ZombiesAll" />
+		    <spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		    <spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" />
+		    <spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsForest" spawnDeadChance="0" />
+    -->
+    <insertAfter xpath="/spawning/biome[@name='pine_forest']/spawn[@entitygroup='FriendlyAnimalsForest']">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="ZombiesAll" />                                     <!-- Addl Entity spawns: max 1 delay 1 -->
+		<spawn maxcount="2" respawndelay="2" time="Night" entitygroup="ZombiesNight" />                                 <!-- Addl Entity spawns: max 2 delay 2 -->
+        <spawn maxcount="2" respawndelay="7" time="Any" entitygroup="FriendlyAnimalsForest" spawnDeadChance="0" />      <!-- Addl Entity spawns: max 2 delay 7 -->
+	</insertAfter>
+
+
+    <!-- 
+        Adjust Desert Biome max zombie count
+    ============================================
+        Defaults:
+            <spawn maxcount="1" respawndelay="3" time="Any" entitygroup="ZombiesAll" />
+		    <spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		    <spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsDesert" spawnDeadChance="0" />
+		    <spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsDesert" spawnDeadChance="0" />    
+    -->
+    <insertAfter xpath="/spawning/biome[@name='desert']/spawn[@entitygroup='FriendlyAnimalsDesert']">
+		<spawn maxcount="1" respawndelay="2" time="Day" entitygroup="ZombiesAll" />                                     <!-- Addl Entity spawns: max 1 delay 2 -->
+		<spawn maxcount="1" respawndelay="2" time="Night" entitygroup="ZombiesNight" />                                 <!-- Addl Entity spawns: max 1 delay 2 -->
+	</insertAfter>
+
+
+    <!-- 
+        Adjust Wasteland Biome max zombie count
+    ============================================
+        Defaults:
+            <spawn maxcount="1" respawndelay="1" time="Day"	entitygroup="ZombiesAll" />
+		    <spawn maxcount="3" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
+		    <spawn maxcount="1" respawndelay="1" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" /> 
+    -->
+    <insertAfter xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='EnemyAnimalsWasteland']">
+		<spawn maxcount="4" respawndelay="2" time="Day" entitygroup="ZombiesAll" />                                     <!-- Addl Entity spawns: max 3 delay 2 -->
+		<spawn maxcount="2" respawndelay="2" time="Night" entitygroup="ZombiesWastelandNight" />                        <!-- Addl Entity spawns: max 1 delay 2 -->
+	</insertAfter>
+
+
+    <!-- 
+        Adjust Burnt Forest Biome max zombie count 
+    =================================================
+        Defaults:
+            <spawn maxcount="1" respawndelay="3" time="Day" entitygroup="ZombiesBurntForest" />
+		    <spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		    <spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsBurntForest" spawnDeadChance="0" />
+		    <spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsBurntForest" spawnDeadChance="0" />
+    -->
+    <insertAfter xpath="/spawning/biome[@name='burnt_forest']/spawn[@entitygroup='FriendlyAnimalsBurntForest']">
+        <spawn maxcount="2" respawndelay="1" time="Day" entitygroup="ZombiesBurntForest" />                             <!-- Addl Entity spawns: max 2 delay 1 -->
+		<spawn maxcount="1" respawndelay="5" time="Day" entitygroup="ZombiesAll" />                                     <!-- Addl Entity spawns: max 1 delay 5 -->
+		<spawn maxcount="1" respawndelay="2" time="Night" entitygroup="ZombiesNight" />                                 <!-- Addl Entity spawns: max 1 delay 2 -->
+	</insertAfter>
+
+
+    <!-- 
+        Adjust Snow Biome max zombie count 
+    ==========================================
+        Defaults:
+            <spawn maxcount="1" respawndelay="3" time="Any" entitygroup="SnowZombies" />
+		    <spawn maxcount="1" respawndelay="2" time="Night" entitygroup="ZombiesNight" />
+		    <spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" />
+		    <spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsSnow" spawnDeadChance="0" /> 
+    -->
+    <insertAfter xpath="/spawning/biome[@name='snow']/spawn[@entitygroup='FriendlyAnimalsSnow']">
+        <spawn maxcount="1" respawndelay="1" time="Any" entitygroup="SnowZombies" />                                    <!-- Addl Entity spawns: max 1 delay 1 -->
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="ZombiesAll" />										<!-- Addl Entity spawns: max 1 delay 3 -->
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />                                 <!-- Addl Entity spawns: max 1 delay 4 -->
+        <spawn maxcount="1" respawndelay="5" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" />           <!-- Addl Entity spawns: max 1 delay 5 -->
+        <spawn maxcount="2" respawndelay="7" time="Any" entitygroup="FriendlyAnimalsSnow" spawnDeadChance="0" />        <!-- Addl Entity spawns: max 2 delay 7 -->
+	</insertAfter>
+</config>
+
+
+<!-- 
+    ==All Navezgane Cities Now not used
+	<biome name="city">
+		<spawn maxcount="3" respawndelay="1" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="5" respawndelay="1" time="Night" entitygroup="ZombiesNight" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="ZombieDogGroup" />
+	</biome>
+
+    ==Not Used anymore in Navezgane
+	<biome name="city_wasteland">
+		<spawn maxcount="1" respawndelay="1" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="ZombiesBoss" />
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="EnemyAnimalsWasteland" />
+	</biome>
+
+    ==Random gen city not used anymore
+	<biome name="wasteland_hub">
+		<spawn maxcount="5" respawndelay="1" time="Day" entitygroup="ZombiesWasteland" />
+		<spawn maxcount="5" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="EnemyAnimalsWasteland" />
+	</biome>
+
+	<biome name="pine_forest">
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		<spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" />
+		<spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsForest" spawnDeadChance="0" />
+	</biome>
+
+	<biome name="desert">
+		<spawn maxcount="1" respawndelay="3" time="Any" entitygroup="ZombiesAll" />
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		<spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsDesert" spawnDeadChance="0" />
+		<spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsDesert" spawnDeadChance="0" />
+	</biome>
+
+	<biome name="wasteland">
+		<spawn maxcount="1" respawndelay="1" time="Day"	entitygroup="ZombiesAll" />
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" />
+	</biome>
+
+	<biome name="burnt_forest">
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="ZombiesBurntForest" />
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesNight" />
+		<spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsBurntForest" spawnDeadChance="0" />
+		<spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsBurntForest" spawnDeadChance="0" />
+	</biome>
+
+	<biome name="snow">
+		<spawn maxcount="1" respawndelay="3" time="Any" entitygroup="SnowZombies" />
+		<spawn maxcount="1" respawndelay="2" time="Night" entitygroup="ZombiesNight" />
+		<spawn maxcount="1" respawndelay="14" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" />
+		<spawn maxcount="1" respawndelay="21" time="Any" entitygroup="FriendlyAnimalsSnow" spawnDeadChance="0" />
+	</biome>
+    -->
