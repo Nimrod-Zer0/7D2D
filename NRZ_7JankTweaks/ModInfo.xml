@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.3" />
+		<Version value="1.4" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -77,6 +77,31 @@
 				First aid bandage now stacks to 10 like regular bandages.
 
 
+			(12-19-2019) v1.4:
+				Greatly reduced chance for shown surface resources veins (from .00657 to 0.001).
+				Reduced chance for shown surface resource boulders (from .00033 to 0.0001).
+				Adjust Gasoline recipe (10 shale makes 10 gas)
+				Slight increase to entity spawns in some biomes (so biome doesnt feel empty for days)
+				Increased wandering horde zombie counts. (larger hordes)
+
+				Notes: 
+					(Surface Resources Veins)
+					The resource ore models on surface that pointed out veins are way to abundant in vanilla gameplay. 
+					In most cases standing on a small hill you could easily see a ton of veins being pointed out to you.
+					The reduction of the shown surface resources (just the model on top - not the actuall vein) is to bring back mining like in 
+					earlier alphas when you actually had to mine large areas to try and find the resource you are looking for.
+					There are still veins pointed out with models on top but they are far fewer then vanilla.
+
+					(Biome Entity Spawns)
+					The idea behind this was 2 fold. Make each biome feel a little more inhabited and not as desalate and to bring a little more variety to each biome type.
+					
+					All biomes - Get a few extra zombies to make areas not feel as desalte and empty like vanilla can (mostly due to the large respawn delays). 
+					Pine Forest Biome - has moderate climate, moderate zombie population, good amount of passive wildlife with few predators.
+					Snow Biome - Can get extremely cold, has low zombie population and the most wildlife (Passive & Predator).
+					Wasteland Biome - Has high zombie population and vast amounts of surface stone and metal around.
+					Desert Biome - Can get extremely hot, has low zombie population, and vast amounts of yucca fruit and aloe plants. 
+
+
 
 			Features:
 				All Animal hitpoints have been adjusted.
@@ -105,6 +130,10 @@
 				Added a bit more variance to how long a zombie can stand back up after being knocked down.
 				Increased Demolisher zombie melee and explosion damage. (to be more a threat in late gamestages)
 				Increased Cop zombie explosion & spit damage. (Acid damage multiplier: Metal = 4X, Stone = 1.5X, Wood = 0.5X)
+				Reduced shown surface resource veins (The surface model not the actuall vein).
+				Reduced shown surface resource boulders.
+				Adjusted biome spawns so world doesnt feel so empty.
+
 
 				NOTE:
 					This mod is all about small changes weather it be for quality of life or small balance adjustments, it should not remove any major features of the game. 
