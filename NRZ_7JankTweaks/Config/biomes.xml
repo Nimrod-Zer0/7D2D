@@ -46,4 +46,19 @@
 	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks01']/@prob">0.001</set>  <!--Default  0.006-->
 	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks02']/@prob">0.001</set>  <!--Default  0.006-->
 	<set xpath="/worldgeneration/biomes/biome[@name='wasteland_hub']/decorations/decoration[@blockname='cinderBlocks03']/@prob">0.001</set>  <!--Default  0.006-->
+
+	<!-- 
+		Reduce shown surface vein resources 
+	===========================================	
+		deco_iron_vein
+		deco_coal_vein
+		deco_nitrate_vein
+		deco_lead_vein
+		deco_shale_vein
+	-->
+	<set xpath="/worldgeneration/biomes/biome/subbiome/decorations/decoration[contains(@name, '_vein')]/@prob">0.001</set>		<!--Default  .00657-->
+	<set xpath="/worldgeneration/biomes/biome/decorations/decoration[contains(@name, '_vein')]/@prob">0.001</set>				<!--Default  .00657-->
+
+	<!-- Reduce the surface rock boulders -->
+	<set xpath="/worldgeneration/biomes/biome/subbiome/decorations/decoration[contains(@blockname, 'rockResource')]/@prob">0.0001</set>		<!--Default  .00033-->
 </configs>
