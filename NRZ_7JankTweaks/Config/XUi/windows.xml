@@ -17,8 +17,8 @@
 				<rect name="rect_playerStatsTemp" >
 					<sprite name="sprite_playerStatsTempBorder" depth="1" pos="3, 0" width="102" height="24" type="sliced" color="0,0,0,192" />
 					<sprite name="sprite_playerStatsTempBackground" depth="1" pos="4, -1" width="100" height="22" type="sliced" color="64,64,64,192" />
-					<sprite name="sprite_playerStatsCold" depth="2" pos="4,-1" style="icon22px" sprite="ui_game_symbol_temperature"/>
-					<label name="label_playerStatsTemp" depth="2" pos="27, -3" width="105" font_size="17" text="Core [DECEA3]{playercoretemp}[-]" />
+					<sprite name="sprite_playerStatsCold" depth="2" pos="0,-1" style="icon22px" sprite="ui_game_symbol_temperature"/>						<!-- 4,-1 -->
+					<label name="label_playerStatsTemp" depth="2" pos="20, -3" width="105" font_size="17" text="Core [DECEA3]{playercoretemp}[-]" />		<!-- 27, -3	-->
 				</rect>
 				
 				<rect name="rect_playerStatsHunger" >
