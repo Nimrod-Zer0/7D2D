@@ -4,7 +4,7 @@
 		<Name value="NRZ_7JankTweaks" />
 		<Description value="7JankTweaks makes many small changes to enhance gameplay and make it a bit more challenging while staying true to the games vanilla core gameplay." />
 		<Author value="Nimrod_Zero" />
-		<Version value="1.4" />
+		<Version value="1.4.1" />
 		<!--
 			command: exportcurrentconfigs
 			will show config with currently altered changes. (to verify that changes actually worked).
@@ -84,6 +84,7 @@
 				Slight increase to entity spawns in some biomes (so biome doesnt feel empty for days)
 				Increased wandering horde zombie counts. (larger hordes)
 
+		
 				Notes: 
 					(Surface Resources Veins)
 					The resource ore models on surface that pointed out veins are way to abundant in vanilla gameplay. 
@@ -102,7 +103,11 @@
 					Desert Biome - Can get extremely hot, has low zombie population, and vast amounts of yucca fruit and aloe plants. 
 
 
+			(12-24-2019) v1.4.1:
+				Adjusted core temp main hud to fit new font used in a18.3
 
+
+				
 			Features:
 				All Animal hitpoints have been adjusted.
 				Added bleeding back into zombie immunitys. (Severely stupid the devs made ZOMBIES be able to bleed to death)
