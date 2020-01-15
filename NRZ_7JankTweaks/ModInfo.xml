@@ -107,6 +107,12 @@
 				Adjusted core temp main hud to fit new font used in a18.3
 
 
+			(Jan-15-2020) v1.5:
+				Adjusted gun powder resouce needed to make Explosive arrows.
+				Adjust Explosive arrow damage to wood and entities.
+				Adjusted hit points on some animals.
+				Auger damage is now based on material. (auger is no longer the best option for cutting thru metal objects, use a pick axe or sledge hammer)
+
 				
 			Features:
 				All Animal hitpoints have been adjusted.
