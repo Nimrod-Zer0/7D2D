@@ -6,13 +6,13 @@
     <set xpath="/entity_classes/entity_class[@name='animalSnake']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">10</set>
     
     <!-- Reduce Wolf health (MountainLion inherates from this) -->
-    <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>
+    <set xpath="/entity_classes/entity_class[@name='animalWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">125</set>
     
     <!-- Reduce DireWolf health -->
-    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">175</set>
+    <set xpath="/entity_classes/entity_class[@name='animalDireWolf']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">215</set>
     
     <!-- Reduce zombie twirly dog health -->
-    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">75</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">85</set>
     
     <!-- Reduce zombie vulture health health -->
     <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">25</set>
@@ -21,13 +21,13 @@
     <set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">55</set>
     
     <!-- Increase Stag health -->
-    <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">90</set>  <!-- 125 -->
+    <set xpath="/entity_classes/entity_class[@name='animalStag']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">125</set>  <!-- 125 -->
     
     <!-- Increase Doe health -->
-    <set xpath="/entity_classes/entity_class[@name='animalDoe']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">85</set> <!-- 100 Default: 50 -->
+    <set xpath="/entity_classes/entity_class[@name='animalDoe']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">110</set> <!-- Default: 50 -->
 
     <!-- Reduce Coyote health -->
-    <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">50</set>
+    <set xpath="/entity_classes/entity_class[@name='animalCoyote']/effect_group/passive_effect[@name='HealthMax' and @operation='base_set']/@value">75</set>
     
     
     <!-- Add bleeding back into zombie immunity buffs (severely stupid devs made ZOMBIES be able to bleed to death)--> 
