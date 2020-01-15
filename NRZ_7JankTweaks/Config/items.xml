@@ -64,6 +64,20 @@
         <passive_effect name="DamageModifier" operation="perc_add" value="1.5" tags="cloth"/>
     </append>
 
+	<!--  Explosive Arrow  -->
+	<remove xpath="/items/item[contains(@name, 'ammoArrowExploding')]/effect_group/passive_effect[@name='DamageModifier' and @operation='perc_add' and @tags='wood']" />
+	<set xpath="/items/item[contains(@name, 'ammoArrowExploding')]/effect_group/passive_effect[@name='DamageModifier' and @operation='perc_set' and @tags='wood']/@value">75.0</set>	<!-- Default: 0.1 -->
+	<set xpath="/items/item[contains(@name, 'ammoArrowExploding')]/effect_group/passive_effect[@name='EntityDamage']/@value">120</set>	<!-- Default: 90 -->
+
+	<!--  Auger  (augers are meant for soft material and should not chew thru metal) -->
+	<append xpath="/items/item[contains(@name, 'meleeToolAuger')]/effect_group[contains(@name, 'meleeToolAuger')]">
+        <passive_effect name="DamageModifier" operation="perc_add" value=".15" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.15" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.4" tags="stone"/>
+    </append>
+
 
 	<!--	
 		Armor changes	(Scrap,Iron,Steel armor are colder to wear in snow and hotter in desert)	   
