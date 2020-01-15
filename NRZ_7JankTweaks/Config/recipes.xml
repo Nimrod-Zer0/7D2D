@@ -123,6 +123,10 @@
     <!--  Gasoline Bundle  -->
     <set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='resourceOilShale']/@count">8000</set> <!-- Default: 800 -->
     
+    <!--  Exploding Arrows  -->
+    <set xpath="/recipes/recipe[@name='ammoArrowExploding']/ingredient[@name='resourceGunPowder']/@count">24</set> <!-- Default: 6 -->
+    <set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceGunPowder']/@count">1440</set> <!-- Default: 360 -->
+
     <!-- Add brass to required resource to craft storage chest -->
     <append xpath="/recipes/recipe[@name='cntSecureStorageChest']">
 	    <ingredient name="resourceScrapBrass" count="2"/>
